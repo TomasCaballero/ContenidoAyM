@@ -144,6 +144,19 @@
             margin-top: 0.125rem; /* Align icon with first line of text */
             color: #1d4ed8; /* blue-700 */
         }
+        .example-box {
+            background-color: #f0f9ff; /* sky-50 */
+            border: 1px solid #bae6fd; /* sky-200 */
+            border-left-width: 4px;
+            border-left-color: #0284c7; /* sky-600 */
+            padding: 0.75rem 1rem;
+            margin-top: 0.75rem;
+            border-radius: 0.375rem;
+            font-size: 0.9rem;
+        }
+        .example-box strong {
+            color: #0369a1; /* sky-700 */
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -195,13 +208,14 @@
                 
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-600">¿Qué son las Metodologías de Desarrollo?</h3>
-                    <p class="mb-4">Las metodologías de desarrollo de software son marcos de trabajo estructurados que se utilizan para planificar, diseñar, desarrollar, probar y mantener sistemas de software. Definen un conjunto de procesos, roles, responsabilidades, herramientas y técnicas para guiar el ciclo de vida del desarrollo.</p>
-                    <p>Elegir la metodología adecuada es crucial para el éxito de un proyecto, ya que impacta en la eficiencia, la calidad del producto final y la capacidad de adaptación a los cambios.</p>
+                    <p class="mb-4">Imagina que quieres construir una casa. No empezarías a poner ladrillos al azar, ¿verdad? Necesitas un plan, saber quién hace qué, qué materiales usar y en qué orden. Las metodologías de desarrollo de software son como esos <strong class="text-indigo-600">planos y guías de construcción</strong>, pero para crear programas y aplicaciones.</p>
+                    <p>Definen un conjunto de procesos (pasos a seguir), roles (quién es responsable de qué), herramientas y técnicas para guiar todo el ciclo de vida del software, desde la idea inicial hasta que está funcionando y se le da mantenimiento.</p>
+                    <p>Elegir la metodología adecuada es como elegir el tipo de plano correcto para tu casa: si es una cabaña pequeña o un rascacielos, necesitarás enfoques diferentes. La elección impacta en la eficiencia, la calidad del software y qué tan fácil es adaptarse si el "cliente" (quien usará el software) cambia de idea sobre el color de las paredes a mitad de construcción.</p>
                 </div>
 
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-600">Metodologías Tradicionales (Prescriptivas)</h3>
-                    <p class="mb-4">También conocidas como predictivas o en cascada, se caracterizan por una planificación detallada al inicio del proyecto y una ejecución secuencial de fases. Los cambios suelen ser costosos y difíciles de gestionar una vez que el proyecto está en marcha.</p>
+                    <p class="mb-4">Piensa en estas como las recetas de cocina muy detalladas donde cada paso debe seguirse al pie de la letra y en orden. Se planifica TODO al inicio y luego se ejecuta fase por fase. Si quieres cambiar un ingrediente principal a mitad de la cocción, puede ser un desastre o muy costoso.</p>
                     
                     <div class="accordion-item mb-2">
                         <div class="accordion-header">
@@ -209,10 +223,10 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2">Es el modelo más clásico. El desarrollo fluye secuencialmente a través de fases bien definidas: Requisitos, Diseño, Implementación, Verificación (Pruebas) y Mantenimiento.</p>
+                            <p class="mb-2">Es el abuelo de los modelos. Imagina construir un edificio piso por piso: primero los cimientos (Requisitos), luego la estructura del primer piso (Diseño), luego construyes ese piso (Implementación), verificas que esté bien (Pruebas) y finalmente lo mantienes (Mantenimiento). No puedes empezar el segundo piso hasta que el primero esté completamente terminado y aprobado.</p>
                             <ul class="list-disc list-inside ml-4">
-                                <li class="mb-1"><strong class="text-green-600">Ventajas:</strong> Simple de entender y gestionar, buena documentación.</li>
-                                <li class="mb-1"><strong class="text-red-600">Desventajas:</strong> Poca flexibilidad a cambios, el cliente ve el producto funcional muy tarde, alto riesgo si los requisitos no están claros desde el inicio.</li>
+                                <li class="mb-1"><strong class="text-green-600">Ventajas:</strong> Fácil de entender, como seguir una lista. Mucho papeleo (documentación), lo que a algunos les gusta.</li>
+                                <li class="mb-1"><strong class="text-red-600">Desventajas:</strong> Si el cliente decide que quería ventanas redondas cuando ya estás poniendo el techo, ¡problemas! El cliente no ve nada funcional hasta muy tarde. Si no entendiste bien los planos al inicio, todo el edificio puede salir mal.</li>
                             </ul>
                         </div>
                     </div>
@@ -223,55 +237,59 @@
                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2">Es una extensión del modelo en cascada. Enfatiza la relación entre cada fase de desarrollo y su fase de prueba correspondiente. Las actividades de prueba se planifican en paralelo con las fases de desarrollo.</p>
+                            <p class="mb-2">Es como el Modelo en Cascada, pero mientras vas diseñando cada parte (bajando por un lado de la "V"), ya vas pensando cómo la vas a probar (subiendo por el otro lado de la "V"). Cada etapa de construcción tiene su etapa de prueba correspondiente.</p>
                              <ul class="list-disc list-inside ml-4">
-                                <li class="mb-1"><strong class="text-green-600">Ventajas:</strong> Énfasis en la verificación y validación temprana, buena trazabilidad.</li>
-                                <li class="mb-1"><strong class="text-red-600">Desventajas:</strong> Similar al cascada en cuanto a rigidez y gestión de cambios.</li>
+                                <li class="mb-1"><strong class="text-green-600">Ventajas:</strong> Se piensa en las pruebas desde el principio. Es más fácil verificar que todo funcione como se espera.</li>
+                                <li class="mb-1"><strong class="text-red-600">Desventajas:</strong> Sigue siendo rígido. Si cambian los requisitos, hay que rehacer mucho del plan de pruebas también.</li>
                             </ul>
                         </div>
                     </div>
-                     <p class="mt-4">Otros modelos tradicionales incluyen el <strong class="text-indigo-600">Modelo Iterativo</strong> (desarrollo en ciclos repetidos), <strong class="text-indigo-600">Modelo Incremental</strong> (entrega de partes funcionales del sistema progresivamente), <strong class="text-indigo-600">Modelo por Prototipos</strong> (creación de versiones tempranas para validar requisitos) y <strong class="text-indigo-600">Modelo en Espiral</strong> (combina iteración con gestión de riesgos).</p>
+                     <p class="mt-4">Otros modelos tradicionales incluyen el <strong class="text-indigo-600">Modelo Iterativo</strong> (hacer una versión básica, probarla, mejorarla, probarla, y así en ciclos), <strong class="text-indigo-600">Modelo Incremental</strong> (entregar el software por pedacitos funcionales, como módulos de una app), <strong class="text-indigo-600">Modelo por Prototipos</strong> (hacer maquetas rápidas para que el cliente vea cómo será y dé su opinión antes de construirlo todo) y <strong class="text-indigo-600">Modelo en Espiral</strong> (como el iterativo pero añadiendo análisis de riesgos en cada vuelta de la espiral).</p>
                 </div>
 
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-600">Introducción a las Metodologías Ágiles</h3>
-                    <p class="mb-4">Las metodologías ágiles surgieron como respuesta a las limitaciones de los modelos tradicionales, especialmente en entornos con requisitos cambiantes o poco definidos. Se centran en la <strong class="text-teal-600">flexibilidad, la colaboración, la entrega continua de valor y la mejora constante</strong>.</p>
-                    <p>En lugar de una planificación exhaustiva al inicio, los proyectos ágiles se dividen en iteraciones cortas (sprints), donde se entrega software funcional y se obtiene retroalimentación frecuente del cliente.</p>
+                    <p class="mb-4">Si las tradicionales son recetas estrictas, las ágiles son más como ser un chef que prueba y ajusta los sabores sobre la marcha. Surgieron porque el software cambia mucho y los clientes a veces no saben bien lo que quieren hasta que ven algo. Se centran en ser <strong class="text-teal-600">flexibles, trabajar en equipo (colaborar), entregar cosas útiles rápido y aprender continuamente</strong>.</p>
+                    <p>En vez de un mega-plan al inicio, se divide el trabajo en "mini-proyectos" cortos (iteraciones o sprints). Al final de cada uno, se entrega una parte del software funcionando para que el cliente pruebe y dé su opinión.</p>
+                     <div class="example-box">
+                        <strong>Ejemplo Ágil:</strong> Imagina desarrollar una app para pedir comida. En vez de planear todas las funciones (pagos, mapas, reseñas, etc.) durante meses, un equipo ágil podría enfocarse en la primera iteración (2 semanas) solo en "permitir al usuario ver restaurantes cercanos y sus menús". Al final de esas 2 semanas, muestran eso al cliente. Quizás el cliente dice: "¡Genial! Pero sería mejor si los menús tuvieran fotos". Esa opinión se usa para el siguiente "mini-proyecto".
+                    </div>
                 </div>
 
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-600">Manifiesto Ágil</h3>
-                    <p class="mb-4">En 2001, un grupo de profesionales del software se reunió y creó el "Manifiesto por el Desarrollo Ágil de Software", que establece 4 valores fundamentales y 12 principios.</p>
+                    <p class="mb-4">En 2001, unos "gurús" del software se juntaron y escribieron este manifiesto, que es como la declaración de principios de la agilidad. Tiene 4 valores clave y 12 principios.</p>
                     
                     <h4 class="text-xl font-semibold mb-3 text-gray-700">Los 4 Valores del Manifiesto Ágil:</h4>
+                    <p class="mb-3 text-sm text-gray-600">Estos valores indican qué se prioriza más, aunque los elementos de la derecha también son importantes.</p>
                     <div class="grid md:grid-cols-2 gap-4 mb-6">
                         <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
                             <div class="flex items-center text-blue-700 mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users mr-2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                                 <h5 class="font-semibold">Individuos e interacciones</h5>
                             </div>
-                            <p class="text-sm">sobre procesos y herramientas.</p>
+                            <p class="text-sm">sobre procesos y herramientas. <span class="block text-xs text-gray-500 mt-1">(Es mejor tener gente talentosa que hable entre sí, que el mejor software de gestión de proyectos si nadie lo usa bien o no colaboran).</span></p>
                         </div>
                         <div class="p-4 bg-green-50 rounded-lg border border-green-200">
                             <div class="flex items-center text-green-700 mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cog mr-2"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 2v2"/><path d="M12 22v-2"/><path d="m17 20.66-1-1.73"/><path d="M11 10.27 7 3.34"/><path d="m20.66 17-1.73-1"/><path d="m3.34 7 1.73 1"/><path d="M14 12h8"/><path d="M2 12h2"/><path d="m20.66 7-1.73 1"/><path d="m3.34 17 1.73-1"/><path d="m17 3.34-1 1.73"/><path d="m11 13.73 4 6.93"/></svg>
                                 <h5 class="font-semibold">Software funcionando</h5>
                             </div>
-                            <p class="text-sm">sobre documentación exhaustiva.</p>
+                            <p class="text-sm">sobre documentación exhaustiva. <span class="block text-xs text-gray-500 mt-1">(Es mejor tener una app que funcione, aunque el manual no esté perfecto, que un manual hermoso de una app que no sirve).</span></p>
                         </div>
                         <div class="p-4 bg-yellow-50 rounded-lg border border-yellow-200">
                             <div class="flex items-center text-yellow-700 mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-handshake mr-2"><path d="M16 17h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2V7a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2v4a2 2 0 0 0 2 2h2Z"/><path d="M18 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0Z"/><path d="M6 19a2 2 0 1 0 4 0a2 2 0 1 0-4 0Z"/></svg>
                                 <h5 class="font-semibold">Colaboración con el cliente</h5>
                             </div>
-                            <p class="text-sm">sobre negociación contractual.</p>
+                            <p class="text-sm">sobre negociación contractual. <span class="block text-xs text-gray-500 mt-1">(Es mejor trabajar junto al cliente para hacer algo que le sirva, que aferrarse a un contrato firmado hace meses si las necesidades cambiaron).</span></p>
                         </div>
                         <div class="p-4 bg-purple-50 rounded-lg border border-purple-200">
                             <div class="flex items-center text-purple-700 mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw mr-2"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg>
                                 <h5 class="font-semibold">Respuesta ante el cambio</h5>
                             </div>
-                            <p class="text-sm">sobre seguir un plan.</p>
+                            <p class="text-sm">sobre seguir un plan. <span class="block text-xs text-gray-500 mt-1">(Es mejor poder ajustar el rumbo si aparece una tormenta o una mejor ruta, que seguir el mapa original ciegamente hacia un acantilado).</span></p>
                         </div>
                     </div>
 
@@ -282,7 +300,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <ol class="list-decimal list-inside space-y-2">
+                            <ol class="list-decimal list-inside space-y-2 text-sm">
                                 <li>Nuestra mayor prioridad es satisfacer al cliente mediante la entrega temprana y continua de software con valor.</li>
                                 <li>Aceptamos que los requisitos cambien, incluso en etapas tardías del desarrollo. Los procesos Ágiles aprovechan el cambio para proporcionar ventaja competitiva al cliente.</li>
                                 <li>Entregar software funcional frecuentemente, entre dos semanas y dos meses, con preferencia al periodo de tiempo más corto posible.</li>
@@ -302,15 +320,14 @@
                 
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-600">Framework Cynefin</h3>
-                    <p class="mb-4">El framework Cynefin (pronunciado ku-NEV-in) es un marco conceptual utilizado para ayudar en la toma de decisiones. Ayuda a identificar la naturaleza de un problema para poder abordarlo de la manera más adecuada. Se divide en cinco dominios:</p>
+                    <p class="mb-4">El framework Cynefin es una herramienta para entender en qué tipo de "terreno" estás antes de decidir cómo actuar. Ayuda a clasificar los problemas en 5 dominios:</p>
                     <ul class="list-disc list-inside space-y-2 ml-4">
-                        <li><strong class="text-green-700">Simple (u Obvio):</strong> Causa y efecto son evidentes. Se aplica las "mejores prácticas". <span class="italic text-gray-600">(Detectar -> Clasificar -> Responder)</span></li>
-                        <li><strong class="text-yellow-700">Complicado:</strong> Causa y efecto requieren análisis o experiencia. Se aplican "buenas prácticas". <span class="italic text-gray-600">(Detectar -> Analizar -> Responder)</span></li>
-                        <li><strong class="text-orange-700">Complejo:</strong> Causa y efecto solo se pueden deducir en retrospectiva. Se requiere experimentación. Prácticas emergentes. <span class="italic text-gray-600">(Experimentar -> Detectar -> Responder)</span>. Aquí es donde las metodologías ágiles como Scrum brillan.</li>
-                        <li><strong class="text-red-700">Caótico:</strong> No hay relación clara entre causa y efecto. Se necesita actuar rápidamente para establecer orden. Prácticas novedosas. <span class="italic text-gray-600">(Actuar -> Detectar -> Responder)</span></li>
-                        <li><strong class="text-gray-700">Desorden:</strong> Cuando no se sabe en qué dominio se está. El objetivo es salir de aquí lo antes posible.</li>
+                        <li><strong class="text-green-700">Simple (u Obvio):</strong> Problemas conocidos, causa-efecto claros. <span class="italic text-gray-600">(Ej: Resetear una contraseña). Se usan "mejores prácticas".</span></li>
+                        <li><strong class="text-yellow-700">Complicado:</strong> Requiere expertos para analizar, hay varias soluciones buenas. <span class="italic text-gray-600">(Ej: Diagnosticar por qué un motor no arranca). Se usan "buenas prácticas".</span></li>
+                        <li><strong class="text-orange-700">Complejo:</strong> No se puede predecir el resultado, hay que experimentar y aprender. Causa-efecto solo se ven después. <span class="italic text-gray-600">(Ej: Desarrollar un producto innovador para un mercado nuevo, criar un hijo). Aquí es donde Scrum y otras metodologías ágiles funcionan muy bien.</span></li>
+                        <li><strong class="text-red-700">Caótico:</strong> Crisis, no hay tiempo para analizar. Hay que actuar rápido para estabilizar. <span class="italic text-gray-600">(Ej: Un servidor principal se cae y afecta a todos los clientes). Se buscan prácticas "novedosas" para salir de la crisis.</span></li>
+                        <li><strong class="text-gray-700">Desorden:</strong> No sabes en qué dominio estás. Peligroso, hay que clasificar la situación rápido.</li>
                     </ul>
-                    <p class="mt-4">Entender en qué dominio se encuentra un proyecto o problema ayuda a elegir la metodología o enfoque más adecuado. Muchos proyectos de software residen en el dominio Complejo debido a la incertidumbre en los requisitos, la tecnología y las interacciones humanas.</p>
                 </div>
 
                 <div class="card">
@@ -326,33 +343,33 @@
                         <tbody>
                             <tr>
                                 <td class="border-b border-gray-200 py-2 px-4">Planificación</td>
-                                <td class="border-b border-gray-200 py-2 px-4">Detallada al inicio, predictiva.</td>
-                                <td class="border-b border-gray-200 py-2 px-4">Adaptativa, iterativa. Planificación continua.</td>
+                                <td class="border-b border-gray-200 py-2 px-4">Detallada al inicio, predictiva. (El mapa completo del viaje antes de salir).</td>
+                                <td class="border-b border-gray-200 py-2 px-4">Adaptativa, iterativa. (Planificas el próximo tramo del viaje, ajustas según el clima y el tráfico).</td>
                             </tr>
                             <tr>
                                 <td class="border-b border-gray-200 py-2 px-4">Gestión de Cambios</td>
-                                <td class="border-b border-gray-200 py-2 px-4">Resistente al cambio, costoso.</td>
-                                <td class="border-b border-gray-200 py-2 px-4">Abierta al cambio, se considera una oportunidad.</td>
+                                <td class="border-b border-gray-200 py-2 px-4">Resistente al cambio, costoso. (Desviarse del mapa es un problema).</td>
+                                <td class="border-b border-gray-200 py-2 px-4">Abierta al cambio. (Si encuentras un atajo o un lugar mejor, ¡genial!).</td>
                             </tr>
                             <tr>
                                 <td class="border-b border-gray-200 py-2 px-4">Entrega</td>
-                                <td class="border-b border-gray-200 py-2 px-4">Al final del proyecto.</td>
-                                <td class="border-b border-gray-200 py-2 px-4">Entregas frecuentes de software funcional.</td>
+                                <td class="border-b border-gray-200 py-2 px-4">Al final del proyecto. (Llegas al destino final y recién ahí muestras todo).</td>
+                                <td class="border-b border-gray-200 py-2 px-4">Entregas frecuentes de software funcional. (Muestras fotos y souvenirs de cada ciudad que visitas).</td>
                             </tr>
                             <tr>
                                 <td class="border-b border-gray-200 py-2 px-4">Colaboración con el Cliente</td>
-                                <td class="border-b border-gray-200 py-2 px-4">Limitada, principalmente en fases iniciales y finales.</td>
-                                <td class="border-b border-gray-200 py-2 px-4">Continua y cercana.</td>
+                                <td class="border-b border-gray-200 py-2 px-4">Limitada. (Hablas con el cliente al inicio para el mapa y al final para ver si le gustó el viaje).</td>
+                                <td class="border-b border-gray-200 py-2 px-4">Continua y cercana. (El cliente viaja contigo o te llama seguido para ver cómo va todo).</td>
                             </tr>
                             <tr>
                                 <td class="border-b border-gray-200 py-2 px-4">Documentación</td>
-                                <td class="border-b border-gray-200 py-2 px-4">Exhaustiva.</td>
-                                <td class="border-b border-gray-200 py-2 px-4">La necesaria, se prefiere software funcionando.</td>
+                                <td class="border-b border-gray-200 py-2 px-4">Exhaustiva. (Un diario de viaje súper detallado).</td>
+                                <td class="border-b border-gray-200 py-2 px-4">La necesaria. (Anotaciones útiles, pero más enfocado en el viaje en sí).</td>
                             </tr>
                              <tr>
                                 <td class="border-b border-gray-200 py-2 px-4">Énfasis</td>
-                                <td class="border-b border-gray-200 py-2 px-4">Procesos y herramientas. Control del proceso.</td>
-                                <td class="border-b border-gray-200 py-2 px-4">Individuos e interacciones. Adaptación.</td>
+                                <td class="border-b border-gray-200 py-2 px-4">Procesos y herramientas. (Seguir las reglas del viaje al pie de la letra).</td>
+                                <td class="border-b border-gray-200 py-2 px-4">Individuos e interacciones. (Que los viajeros se lleven bien y resuelvan problemas juntos).</td>
                             </tr>
                         </tbody>
                     </table>
@@ -363,171 +380,169 @@
                 <h2 class="text-3xl font-bold mb-6 text-green-700">Módulo 2: Scrum - El Marco Ágil Popular</h2>
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-green-600">¿Qué es Scrum?</h3>
-                    <p class="mb-2">Scrum es un marco de trabajo (framework) ágil, ligero y fácil de entender, aunque extremadamente difícil de dominar. Se utiliza para desarrollar, entregar y mantener productos complejos, especialmente en entornos con alta incertidumbre.</p>
-                    <p class="mb-2">No es una metodología completa con instrucciones detalladas sobre cómo hacer cada tarea, sino un conjunto de <strong class="text-teal-600">roles, eventos, artefactos y reglas</strong> que guían el desarrollo del producto.</p>
-                    <p class="mb-2">Scrum se basa en la <strong class="text-teal-600">teoría de control de procesos empírica (empirismo)</strong>. El empirismo asegura que el conocimiento procede de la experiencia y de tomar decisiones basándose en lo que se conoce. Se sustenta en tres pilares fundamentales:</p>
+                    <p class="mb-2">Imagina que Scrum es como las <strong class="text-indigo-600">reglas de un deporte de equipo</strong>, como el rugby (de donde toma su nombre). No te dice exactamente cómo jugar cada jugada (eso lo decide el equipo), pero te da una estructura: tiempos de juego (Sprints), roles (posiciones de los jugadores), reuniones para planificar y revisar (charlas técnicas), y formas de medir el progreso.</p>
+                    <p class="mb-2">Es un marco de trabajo <strong class="text-teal-600">ligero y fácil de entender en sus bases, pero muy difícil de dominar</strong>. Se usa para desarrollar productos complejos, especialmente cuando no sabes todas las respuestas al principio (dominio complejo de Cynefin).</p>
+                    <p class="mb-2">Scrum se basa en el <strong class="text-teal-600">empirismo</strong>: aprender haciendo y tomando decisiones basadas en la experiencia. Sus tres pilares son:</p>
                     <ul class="icon-list ml-4 space-y-2 mb-4">
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-                            <div><strong class="text-teal-700">Transparencia:</strong> Los aspectos significativos del proceso deben ser visibles para aquellos que son responsables del resultado. Esto requiere que dichos aspectos sean definidos por un estándar común (ej. lenguaje común, Definición de "Terminado") para que los observadores compartan un entendimiento común.</div>
+                            <div><strong class="text-teal-700">Transparencia:</strong> Todos deben ver lo que está pasando. El trabajo importante debe ser visible y entendido por todos. (Ej: Un tablero con las tareas del equipo a la vista de todos).</div>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                            <div><strong class="text-teal-700">Inspección:</strong> Los usuarios de Scrum deben inspeccionar frecuentemente los artefactos de Scrum y el progreso hacia un Objetivo del Sprint para detectar variaciones indeseadas. Las inspecciones no deben ser tan frecuentes como para que interfieran en el trabajo.</div>
+                            <div><strong class="text-teal-700">Inspección:</strong> Revisar frecuentemente cómo va el trabajo y el producto para detectar problemas o desvíos. (Ej: Mirar el software que se está construyendo al final de cada Sprint).</div>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings-2"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
-                            <div><strong class="text-teal-700">Adaptación:</strong> Si un inspector determina que uno o más aspectos de un proceso se desvían de límites aceptables y que el producto resultante no será aceptable, el proceso o el material que está siendo procesado deben ser ajustados. Dicho ajuste debe realizarse cuanto antes para minimizar desviaciones mayores.</div>
+                            <div><strong class="text-teal-700">Adaptación:</strong> Si algo no va bien, cambiarlo. Ajustar el proceso o el producto para mejorar. (Ej: Si una forma de trabajar no funciona, el equipo decide probar otra en la siguiente "jugada").</div>
                         </li>
                     </ul>
-                    <p>Scrum emplea un enfoque <strong class="text-indigo-600">iterativo e incremental</strong> para optimizar la predictibilidad y el control del riesgo, permitiendo abordar problemas complejos adaptativos y entregar productos del máximo valor posible de forma productiva y creativa.</p>
+                     <div class="example-box">
+                        <strong>Ejemplo de Empirismo en Scrum:</strong> Un equipo está construyendo una app para aprender idiomas.
+                        <ul>
+                            <li><strong>Transparencia:</strong> Tienen un Product Backlog (lista de cosas por hacer) visible para todos. Saben qué significa "Terminado" para una lección.</li>
+                            <li><strong>Inspección:</strong> Al final de un Sprint de 2 semanas, muestran una nueva lección interactiva (el Incremento) al Product Owner y algunos usuarios.</li>
+                            <li><strong>Adaptación:</strong> Los usuarios dicen que los ejercicios son muy difíciles. El equipo y el Product Owner deciden que para el próximo Sprint, simplificarán los ejercicios existentes y añadirán pistas.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-green-600">Valores de Scrum</h3>
-                    <p class="mb-3">El éxito en el uso de Scrum depende de que las personas involucradas vivan y respiren cinco valores fundamentales. Estos valores dan dirección al Equipo Scrum con respecto a su trabajo, acciones y comportamiento.</p>
+                    <p class="mb-3">Para que Scrum funcione, el equipo necesita vivir estos 5 valores. Son como el "espíritu deportivo" del equipo:</p>
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div class="p-4 bg-green-50 rounded-lg border border-green-300 shadow-sm">
                             <div class="flex items-center text-green-700 mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target mr-2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
                                 <h4 class="font-semibold text-lg">Foco</h4>
                             </div>
-                            <p class="text-sm text-gray-700">Todo el Equipo Scrum se enfoca en el trabajo del Sprint y en los objetivos del equipo. Concentrarse en unas pocas cosas a la vez.</p>
+                            <p class="text-sm text-gray-700">Concentrarse en el trabajo del Sprint y en los objetivos del equipo. Evitar distracciones.</p>
                         </div>
                         <div class="p-4 bg-yellow-50 rounded-lg border border-yellow-300 shadow-sm">
                              <div class="flex items-center text-yellow-700 mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check mr-2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
                                 <h4 class="font-semibold text-lg">Coraje</h4>
                             </div>
-                            <p class="text-sm text-gray-700">Los miembros del Equipo Scrum tienen el coraje de hacer lo correcto, de trabajar en problemas difíciles y de ser honestos sobre el progreso y los impedimentos.</p>
+                            <p class="text-sm text-gray-700">Tener la valentía de hacer lo correcto, abordar problemas difíciles y ser honestos sobre los obstáculos.</p>
                         </div>
                         <div class="p-4 bg-blue-50 rounded-lg border border-blue-300 shadow-sm">
                             <div class="flex items-center text-blue-700 mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-check mr-2"><path d="M8 3H2v15h7c1.7 0 3 1.3 3 3V7c0-2.2-1.8-4-4-4Z"/><path d="m16 12 2 2 4-4"/><path d="M22 6V3h-6c-2.2 0-4 1.8-4 4v14c0-1.7 1.3-3 3-3h7Z"/></svg>
                                 <h4 class="font-semibold text-lg">Apertura</h4>
                             </div>
-                            <p class="text-sm text-gray-700">El Equipo Scrum y sus stakeholders acuerdan ser abiertos sobre todo el trabajo y los desafíos con el proyecto.</p>
+                            <p class="text-sm text-gray-700">Ser transparentes sobre el trabajo, los desafíos y el aprendizaje. No ocultar problemas.</p>
                         </div>
                         <div class="p-4 bg-indigo-50 rounded-lg border border-indigo-300 shadow-sm">
                             <div class="flex items-center text-indigo-700 mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-check mr-2"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
                                 <h4 class="font-semibold text-lg">Compromiso</h4>
                             </div>
-                            <p class="text-sm text-gray-700">Las personas se comprometen personalmente a alcanzar los objetivos del Equipo Scrum. El equipo se compromete a entregar un Incremento de alta calidad.</p>
+                            <p class="text-sm text-gray-700">Comprometerse personalmente a alcanzar los objetivos del equipo y a entregar un producto de calidad.</p>
                         </div>
                         <div class="p-4 bg-pink-50 rounded-lg border border-pink-300 shadow-sm">
                             <div class="flex items-center text-pink-700 mb-2">
                                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake mr-2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08v0c.82.82 2.13.82 2.94 0l.06.06L12 11l2.96-2.96a2.17 2.17 0 0 0 0-3.08v0c-.82-.82-2.13-.82-2.94 0l-.06-.06L12 5Z"/></svg>
                                 <h4 class="font-semibold text-lg">Respeto</h4>
                             </div>
-                            <p class="text-sm text-gray-700">Los miembros del Equipo Scrum se respetan mutuamente como personas capaces e independientes, y respetan las opiniones y experiencias de los demás.</p>
+                            <p class="text-sm text-gray-700">Respetarse mutuamente como personas capaces e independientes, con diversas habilidades y experiencias.</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="card">
                      <h3 class="text-2xl font-semibold mb-4 text-green-600">El Equipo Scrum (Scrum Team)</h3>
-                     <p class="mb-3">El Equipo Scrum es la unidad fundamental de Scrum. Es un equipo cohesivo de profesionales enfocado en un objetivo a la vez, el Objetivo del Producto. Consiste en tres roles específicos:</p>
+                     <p class="mb-3">Es el "equipo deportivo" completo. Son autoorganizados (deciden cómo hacer su trabajo) y multifuncionales (tienen todas las habilidades necesarias). Hay 3 roles:</p>
                     <div class="accordion-item mb-2">
                         <div class="accordion-header">
-                            <span class="font-medium text-lg">1. El Dueño de Producto (Product Owner)</span>
+                            <span class="font-medium text-lg">1. El Dueño de Producto (Product Owner - PO)</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2">Es la <strong class="text-green-700">única persona responsable de maximizar el valor del producto</strong> resultante del trabajo del Equipo de Desarrollo. Es el responsable de la gestión efectiva del Product Backlog.</p>
+                            <p class="mb-2">Es como el <strong class="text-green-700">dueño o gerente del equipo deportivo</strong>. Su principal objetivo es <strong class="text-indigo-600">maximizar el valor del producto</strong>. Es el único responsable de gestionar el <strong class="text-indigo-600">Product Backlog</strong> (la lista de "jugadas" o características que el equipo podría construir).</p>
                             <p class="mb-2"><strong>Responsabilidades clave:</strong></p>
                             <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
-                                <li>Desarrollar y comunicar explícitamente el <strong class="text-indigo-600">Objetivo del Producto (Product Goal)</strong>.</li>
-                                <li>Crear y comunicar claramente los elementos del <strong class="text-indigo-600">Product Backlog</strong>.</li>
-                                <li>Ordenar los elementos del Product Backlog según el valor y los objetivos.</li>
-                                <li>Asegurar que el Product Backlog sea transparente, visible y entendido por todos.</li>
-                                <li>Representar las necesidades de los stakeholders y del cliente.</li>
+                                <li>Definir y comunicar claramente el <strong class="text-indigo-600">Objetivo del Producto</strong> (hacia dónde va el producto a largo plazo).</li>
+                                <li>Crear y priorizar los elementos del Product Backlog (qué construir y en qué orden).</li>
+                                <li>Asegurarse de que el Product Backlog sea visible y entendido por todos.</li>
+                                <li>Ser la voz del cliente y los stakeholders.</li>
                             </ul>
-                            <p class="mt-2 text-sm">El Product Owner puede delegar trabajo relacionado con el Product Backlog, pero sigue siendo el responsable final. Para que tenga éxito, toda la organización debe respetar sus decisiones, que son visibles en el contenido y ordenación del Product Backlog.</p>
+                            <div class="example-box">
+                                <strong>Ejemplo de Product Owner:</strong> Para una nueva app de red social, el PO podría definir el Objetivo del Producto como "Crear la plataforma líder para que los artistas emergentes conecten con su audiencia". Luego, priorizaría características como "perfil de artista" y "subir música" antes que "mensajería avanzada entre usuarios".
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item mb-2">
                         <div class="accordion-header">
-                            <span class="font-medium text-lg">2. El Equipo de Desarrollo (Development Team)</span>
+                            <span class="font-medium text-lg">2. El Equipo de Desarrollo (Development Team o Developers)</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2">Consiste en los profesionales que realizan el trabajo de entregar un <strong class="text-green-700">Incremento "Terminado"</strong> y potencialmente desplegable al final de cada Sprint. Son los que crean cualquier aspecto del Incremento.</p>
+                            <p class="mb-2">Son los <strong class="text-green-700">jugadores en el campo</strong>. Son los que construyen el producto (el Incremento "Terminado") en cada Sprint.</p>
                             <p class="mb-2"><strong>Características:</strong></p>
                             <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
-                                <li>Son <strong class="text-indigo-600">autoorganizados:</strong> Nadie (ni siquiera el Scrum Master) les dice cómo convertir los elementos del Product Backlog en Incrementos.</li>
-                                <li>Son <strong class="text-indigo-600">multifuncionales:</strong> Como equipo, poseen todas las habilidades necesarias para crear el Incremento del producto.</li>
-                                <li>No hay títulos ni jerarquías dentro del equipo; todos son Desarrolladores.</li>
-                                <li>No hay sub-equipos (ej. equipo de testing, equipo de análisis).</li>
-                                <li>La responsabilidad recae en el equipo como un todo.</li>
+                                <li><strong class="text-indigo-600">Autoorganizados:</strong> Deciden cómo hacer su trabajo.</li>
+                                <li><strong class="text-indigo-600">Multifuncionales:</strong> Tienen todas las habilidades necesarias (programación, diseño, pruebas, etc.).</li>
+                                <li>Típicamente de 3 a 9 personas.</li>
+                                <li>No hay sub-equipos (todos son "Desarrolladores").</li>
                             </ul>
-                            <p class="mt-2 text-sm"><strong class="text-indigo-600">Tamaño:</strong> Típicamente de 3 a 9 miembros. Lo suficientemente pequeño para ser ágil y lo suficientemente grande para completar trabajo significativo en un Sprint. El Product Owner y Scrum Master no cuentan en este tamaño a menos que también ejecuten trabajo del Sprint Backlog.</p>
+                             <div class="example-box">
+                                <strong>Ejemplo de Equipo de Desarrollo:</strong> Un equipo de 5 personas desarrollando un videojuego. Tienen programadores, un artista gráfico, un diseñador de niveles y alguien que también hace pruebas. Todos colaboran para entregar una nueva demo del juego cada Sprint.
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item mb-2">
                         <div class="accordion-header">
-                            <span class="font-medium text-lg">3. El Scrum Master</span>
+                            <span class="font-medium text-lg">3. El Scrum Master (SM)</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2">Es el responsable de <strong class="text-green-700">asegurar que Scrum sea entendido y adoptado</strong>. Lo hace asegurando que el Equipo Scrum se adhiere a la teoría, prácticas y reglas de Scrum. Es un <strong class="text-indigo-600">líder servicial</strong> para el Equipo Scrum.</p>
-                            <p class="mb-2"><strong>Servicios que provee:</strong></p>
+                            <p class="mb-2">Es como el <strong class="text-green-700">entrenador y facilitador del equipo</strong>. Ayuda a todos a entender y usar Scrum correctamente. Es un <strong class="text-indigo-600">líder servicial</strong>: su objetivo es ayudar al equipo a ser lo más efectivo posible.</p>
+                            <p class="mb-2"><strong>Responsabilidades clave:</strong></p>
                             <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
-                                <li><strong>Al Product Owner:</strong> Ayuda a encontrar técnicas para la gestión efectiva del Product Backlog, facilita la comprensión de la planificación empírica, asegura que el PO sepa cómo maximizar el valor.</li>
-                                <li><strong>Al Equipo de Desarrollo:</strong> Guía en ser autoorganizado y multifuncional, ayuda a crear productos de alto valor, elimina impedimentos para su progreso, facilita los eventos de Scrum.</li>
-                                <li><strong>A la Organización:</strong> Lidera y guía en la adopción de Scrum, planifica implementaciones, ayuda a empleados y stakeholders a entender Scrum, motiva cambios que incrementen la productividad del equipo.</li>
+                                <li>Asegurar que el equipo siga las reglas y prácticas de Scrum.</li>
+                                <li>Eliminar impedimentos (obstáculos) que bloqueen al equipo.</li>
+                                <li>Facilitar las reuniones de Scrum.</li>
+                                <li>Ayudar al Product Owner con el Product Backlog.</li>
+                                <li>Proteger al equipo de interrupciones externas.</li>
                             </ul>
-                            <p class="mt-2 text-sm">El Scrum Master ayuda a eliminar las barreras entre los stakeholders y los Equipos Scrum.</p>
+                            <div class="example-box">
+                                <strong>Ejemplo de Scrum Master:</strong> Si el Equipo de Desarrollo necesita una licencia de software para trabajar y no la tiene, el Scrum Master se encarga de hablar con el departamento correspondiente para conseguirla rápido, para que el equipo no se detenga. O si las reuniones diarias se vuelven muy largas y poco productivas, el SM ayuda al equipo a reenfocarlas.
+                            </div>
                         </div>
                     </div>
                 </div>
 
                  <div class="card">
                      <h3 class="text-2xl font-semibold mb-4 text-green-600">Eventos de Scrum</h3>
-                     <p class="mb-3">Scrum prescribe eventos formales para crear regularidad, minimizar la necesidad de reuniones no definidas en Scrum y proporcionar oportunidades formales para la inspección y adaptación. Todos los eventos son <strong class="text-indigo-600">time-boxed</strong> (tienen una duración máxima).</p>
+                     <p class="mb-3">Son las "reuniones y tiempos de juego" de Scrum. Todos tienen una duración máxima (time-box) para mantener el foco.</p>
                     <div class="accordion-item mb-2">
                         <div class="accordion-header">
                             <span class="font-medium text-lg">El Sprint</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2">Es el <strong class="text-green-700">corazón de Scrum</strong>. Es un time-box de <strong class="text-indigo-600">un mes o menos</strong> durante el cual se crea un Incremento de producto "Terminado", utilizable y potencialmente desplegable. Los Sprints tienen duraciones consistentes a lo largo del desarrollo. Un nuevo Sprint comienza inmediatamente después de la finalización del anterior.</p>
-                            <p class="mb-2"><strong>Durante el Sprint:</strong></p>
-                            <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
-                                <li>No se realizan cambios que pongan en peligro el <strong class="text-indigo-600">Objetivo del Sprint (Sprint Goal)</strong>.</li>
-                                <li>Los objetivos de calidad no disminuyen.</li>
-                                <li>El alcance puede ser clarificado y renegociado entre el Product Owner y el Equipo de Desarrollo a medida que se aprende más.</li>
-                            </ul>
-                            <p class="mt-2 mb-2 text-sm">Cada Sprint tiene un Objetivo de lo que se va a construir, un diseño y un plan flexible que guiará su construcción, el trabajo y el producto resultante.</p>
-                            <p class="mb-2 text-sm"><strong class="text-red-600">Cancelación de un Sprint:</strong> Solo el Product Owner tiene la autoridad para cancelar un Sprint, aunque puede hacerlo bajo la influencia de otros. Ocurre si el Objetivo del Sprint se vuelve obsoleto. Es raro debido a la corta duración de los Sprints.</p>
-                            <p class="text-sm">Los Sprints contienen y consisten en: Sprint Planning, Daily Scrums, el trabajo de desarrollo, Sprint Review y Sprint Retrospective.</p>
+                            <p class="mb-2">Es el <strong class="text-green-700">corazón de Scrum</strong>, como un "mini-proyecto" que dura <strong class="text-indigo-600">un mes o menos</strong> (generalmente 2 semanas). Durante el Sprint, el equipo construye un Incremento de producto utilizable.</p>
+                            <p class="mb-2"><strong>Durante el Sprint:</strong> No se hacen cambios que pongan en peligro el <strong class="text-indigo-600">Objetivo del Sprint</strong>.</p>
+                            <div class="example-box">
+                                <strong>Ejemplo de Sprint:</strong> Un equipo de una app de recetas tiene un Sprint de 2 semanas. Su Objetivo del Sprint es "Permitir a los usuarios guardar sus recetas favoritas". Durante esas 2 semanas, se enfocan solo en eso.
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item mb-2">
                         <div class="accordion-header">
-                            <span class="font-medium text-lg">Sprint Planning (Reunión de Planificación del Sprint)</span>
+                            <span class="font-medium text-lg">Sprint Planning (Planificación del Sprint)</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2">Planifica el trabajo a realizar en el Sprint. Es un evento colaborativo para todo el Equipo Scrum. Time-box: <strong class="text-indigo-600">máximo 8 horas</strong> para un Sprint de un mes (más corto para Sprints más cortos).</p>
-                            <p class="mb-2"><strong>Responde a dos preguntas:</strong></p>
+                            <p class="mb-2">Es la reunión <strong class="text-green-700">al inicio del Sprint</strong> donde todo el Equipo Scrum planifica el trabajo. Máximo 8 horas para un Sprint de un mes.</p>
+                            <p class="mb-2">Se responden dos preguntas:</p>
                             <ol class="list-decimal list-inside ml-4 space-y-1 text-sm">
-                                <li><strong>¿Qué puede entregarse en el Incremento resultante del Sprint que comienza?</strong>
-                                    <ul class="list-disc list-inside ml-6 text-xs">
-                                        <li>El Product Owner presenta el objetivo que el Sprint debería alcanzar y los elementos del Product Backlog que ayudarían a lograrlo.</li>
-                                        <li>El Equipo de Desarrollo proyecta la funcionalidad que se desarrollará. Solo el Equipo de Desarrollo puede evaluar cuánto puede lograr.</li>
-                                        <li>El Equipo Scrum define el <strong class="text-indigo-600">Objetivo del Sprint (Sprint Goal)</strong>.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>¿Cómo se conseguirá hacer el trabajo necesario para entregar el Incremento?</strong>
-                                    <ul class="list-disc list-inside ml-6 text-xs">
-                                        <li>El Equipo de Desarrollo planifica el trabajo necesario para convertir los elementos seleccionados del Product Backlog en un Incremento "Terminado".</li>
-                                        <li>El resultado es el <strong class="text-indigo-600">Sprint Backlog</strong> (elementos del Product Backlog seleccionados + plan para entregarlos).</li>
-                                        <li>El trabajo se descompone en tareas más pequeñas (idealmente de un día o menos).</li>
-                                    </ul>
-                                </li>
+                                <li><strong>¿Qué se puede entregar en este Sprint?</strong> (El PO presenta los elementos más importantes del Product Backlog, y el Equipo de Desarrollo selecciona cuánto trabajo cree que puede hacer. Se define el Objetivo del Sprint).</li>
+                                <li><strong>¿Cómo se hará el trabajo seleccionado?</strong> (El Equipo de Desarrollo planifica cómo va a construir esos elementos).</li>
                             </ol>
-                            <p class="mt-2 text-sm">Al final, el Equipo de Desarrollo debería poder explicar cómo pretende trabajar como un equipo autoorganizado para lograr el Objetivo del Sprint y crear el Incremento esperado.</p>
+                             <div class="example-box">
+                                <strong>Ejemplo de Sprint Planning:</strong> Para el Sprint de "guardar recetas favoritas", el PO muestra las historias de usuario relacionadas. El equipo selecciona "Como usuario, quiero marcar una receta como favorita" y "Como usuario, quiero ver mi lista de recetas favoritas". Definen el Objetivo del Sprint. Luego, el equipo planifica las tareas: "crear botón de favorito", "diseñar base de datos para favoritos", "crear pantalla de lista de favoritos", etc.
+                            </div>
                         </div>
                     </div>
                      <div class="accordion-item mb-2">
@@ -536,15 +551,20 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2">Es una reunión de <strong class="text-indigo-600">15 minutos</strong> para el Equipo de Desarrollo. Se realiza cada día del Sprint para inspeccionar el progreso hacia el Objetivo del Sprint y adaptar el Sprint Backlog según sea necesario.</p>
-                            <p class="mb-2"><strong>Durante la reunión, cada Desarrollador explica:</strong></p>
+                            <p class="mb-2">Una reunión <strong class="text-green-700">diaria de 15 minutos</strong> para el Equipo de Desarrollo. Sirve para sincronizarse y planificar las próximas 24 horas.</p>
+                            <p class="mb-2">Cada miembro responde 3 preguntas:</p>
                             <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
-                                <li>¿Qué hice ayer que ayudó al Equipo de Desarrollo a lograr el Objetivo del Sprint?</li>
-                                <li>¿Qué haré hoy para ayudar al Equipo de Desarrollo a lograr el Objetivo del Sprint?</li>
-                                <li>¿Veo algún impedimento que evite que yo o el Equipo de Desarrollo logremos el Objetivo del Sprint?</li>
+                                <li>¿Qué hice ayer para ayudar al equipo a alcanzar el Objetivo del Sprint?</li>
+                                <li>¿Qué haré hoy para ayudar al equipo a alcanzar el Objetivo del Sprint?</li>
+                                <li>¿Veo algún impedimento que me bloquee a mí o al equipo?</li>
                             </ul>
-                            <p class="mt-2 mb-2 text-sm">El Daily Scrum mejora la comunicación, identifica impedimentos, promueve la toma rápida de decisiones y mejora el nivel de conocimiento del Equipo de Desarrollo. Es una reunión clave de inspección y adaptación.</p>
-                            <p class="text-sm">El Scrum Master se asegura de que el Equipo de Desarrollo tenga la reunión, pero el Equipo de Desarrollo es responsable de dirigirla. Solo los miembros del Equipo de Desarrollo participan activamente.</p>
+                            <div class="example-box">
+                                <strong>Ejemplo de Daily Scrum:</strong>
+                                <ul>
+                                    <li>Ana (Desarrolladora): "Ayer terminé el botón de favorito. Hoy voy a empezar con la base de datos. No tengo impedimentos."</li>
+                                    <li>Luis (Desarrollador): "Ayer avancé con la pantalla de lista, pero me bloqueé porque no entiendo bien cómo deben ordenarse. Necesito hablar con el PO." (El Scrum Master toma nota de este impedimento).</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item mb-2">
@@ -553,17 +573,11 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2">Se lleva a cabo <strong class="text-green-700">al final del Sprint</strong> para inspeccionar el Incremento y adaptar el Product Backlog si fuese necesario. Es una sesión de trabajo, no una presentación formal. Time-box: <strong class="text-indigo-600">máximo 4 horas</strong> para un Sprint de un mes.</p>
-                            <p class="mb-2"><strong>Elementos clave:</strong></p>
-                            <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
-                                <li>Asisten el Equipo Scrum y los stakeholders clave invitados por el Product Owner.</li>
-                                <li>El Product Owner explica qué elementos del Product Backlog se han "Terminado" y cuáles no.</li>
-                                <li>El Equipo de Desarrollo demuestra el trabajo "Terminado" (el Incremento) y responde preguntas.</li>
-                                <li>El Equipo de Desarrollo habla sobre qué fue bien, qué problemas surgieron y cómo se resolvieron.</li>
-                                <li>El Product Owner discute el estado actual del Product Backlog y proyecta fechas de finalización probables.</li>
-                                <li>Todo el grupo colabora sobre qué hacer a continuación, proporcionando información para el siguiente Sprint Planning. Se revisa el mercado, presupuesto, cronograma, etc.</li>
-                            </ul>
-                            <p class="mt-2 text-sm">El resultado es un <strong class="text-indigo-600">Product Backlog revisado</strong> que define los elementos probables para el siguiente Sprint.</p>
+                            <p class="mb-2">Se hace <strong class="text-green-700">al final del Sprint</strong>. El Equipo Scrum muestra el trabajo "Terminado" (el Incremento) a los stakeholders (clientes, usuarios, etc.) y se recoge su feedback. Máximo 4 horas para un Sprint de un mes.</p>
+                            <p class="mb-2">No es una demo formal, sino una <strong class="text-indigo-600">sesión de trabajo colaborativa</strong> para inspeccionar el producto y adaptar el Product Backlog si es necesario.</p>
+                            <div class="example-box">
+                                <strong>Ejemplo de Sprint Review:</strong> El equipo muestra la función de "guardar recetas favoritas" funcionando. Un stakeholder sugiere: "Sería útil poder organizar las favoritas en carpetas". El PO toma nota de esta idea para considerarla en el Product Backlog.
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item mb-2">
@@ -572,53 +586,46 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2">Ocurre <strong class="text-green-700">después del Sprint Review y antes del siguiente Sprint Planning</strong>. Es una oportunidad para que el Equipo Scrum se inspeccione a sí mismo y cree un plan para implementar mejoras en el siguiente Sprint. Time-box: <strong class="text-indigo-600">máximo 3 horas</strong> para un Sprint de un mes.</p>
-                            <p class="mb-2"><strong>Propósito:</strong></p>
-                            <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
-                                <li>Inspeccionar cómo fue el último Sprint en cuanto a individuos, interacciones, procesos, herramientas y su Definición de "Terminado".</li>
-                                <li>Identificar y ordenar los elementos más importantes que salieron bien y las posibles mejoras.</li>
-                                <li>Crear un plan para implementar las mejoras.</li>
-                            </ul>
-                            <p class="mt-2 text-sm">El Scrum Master facilita la reunión y participa como miembro del equipo. El objetivo es mejorar continuamente la efectividad y la calidad. Las mejoras identificadas se pueden agregar al Sprint Backlog del próximo Sprint.</p>
+                            <p class="mb-2">Ocurre <strong class="text-green-700">después del Sprint Review y antes del siguiente Sprint Planning</strong>. Es una reunión para que el Equipo Scrum reflexione sobre cómo fue el último Sprint y planee mejoras para el siguiente. Máximo 3 horas para un Sprint de un mes.</p>
+                            <p class="mb-2">Se busca responder: ¿Qué hicimos bien? ¿Qué podríamos mejorar? ¿Qué vamos a intentar hacer diferente en el próximo Sprint?</p>
+                             <div class="example-box">
+                                <strong>Ejemplo de Sprint Retrospective:</strong> El equipo discute que la comunicación sobre el bloqueo de Luis (del Daily Scrum) podría haber sido más rápida. Deciden que para el próximo Sprint, si alguien se bloquea, lo comunicará inmediatamente al Scrum Master además de en la Daily.
+                            </div>
                         </div>
                     </div>
                      <div class="accordion-item mb-2">
                         <div class="accordion-header">
-                            <span class="font-medium text-lg">Refinamiento del Product Backlog (Product Backlog Refinement)</span>
+                            <span class="font-medium text-lg">Refinamiento del Product Backlog</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2">Aunque no es un evento formal con un time-box fijo, es una <strong class="text-green-700">actividad continua</strong> que el Equipo Scrum realiza para añadir detalle, estimaciones y orden a los elementos del Product Backlog. Generalmente consume <strong class="text-indigo-600">no más del 10% de la capacidad</strong> del Equipo de Desarrollo.</p>
-                            <p class="mb-2"><strong>Objetivos:</strong></p>
-                            <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
-                                <li>Asegurar que los elementos del Product Backlog estén listos ("Ready") para ser seleccionados en un Sprint Planning.</li>
-                                <li>Descomponer elementos grandes (Epics) en historias más pequeñas y manejables.</li>
-                                <li>Clarificar dudas y añadir criterios de aceptación.</li>
-                                <li>Estimar el esfuerzo de los elementos.</li>
-                            </ul>
-                            <p class="mt-2 text-sm">El Product Owner es responsable de esta actividad, aunque es un esfuerzo colaborativo con el Equipo de Desarrollo.</p>
+                            <p class="mb-2">Es una <strong class="text-green-700">actividad continua</strong> (no un evento formal con time-box fijo) donde el PO y el Equipo de Desarrollo revisan y detallan los elementos del Product Backlog. Se añaden detalles, se dividen historias grandes, se estiman, etc. Suele ocupar no más del 10% del tiempo del Equipo de Desarrollo.</p>
+                            <div class="example-box">
+                                <strong>Ejemplo de Refinamiento:</strong> A mitad del Sprint actual, el equipo se reúne 1 hora con el PO para hablar de las historias de usuario que probablemente entren en el siguiente Sprint. Discuten la historia "Como usuario, quiero buscar recetas por ingrediente". La dividen en tareas más pequeñas y aclaran dudas sobre cómo debería funcionar el buscador.
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="card">
                      <h3 class="text-2xl font-semibold mb-4 text-green-600">Artefactos de Scrum</h3>
-                     <p class="mb-3">Los artefactos de Scrum representan trabajo o valor. Están diseñados para maximizar la transparencia de la información clave, permitiendo la inspección y adaptación.</p>
+                     <p class="mb-3">Son las "cosas" que se producen y usan en Scrum para hacer el trabajo visible y transparente.</p>
                     <div class="accordion-item mb-2">
                         <div class="accordion-header">
                             <span class="font-medium text-lg">1. Product Backlog (Lista de Producto)</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2">Es una <strong class="text-green-700">lista ordenada y emergente</strong> de todo lo que se conoce que es necesario en el producto. Es la única fuente de trabajo que realiza el Equipo Scrum. El <strong class="text-indigo-600">Product Owner es responsable</strong> de su contenido, disponibilidad y ordenación.</p>
-                            <p class="mb-2"><strong>Características:</strong></p>
-                            <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
-                                <li>Contiene todas las características, funcionalidades, requisitos, mejoras y correcciones (PBIs - Product Backlog Items).</li>
-                                <li>Es dinámico y evoluciona constantemente. Nunca está completo.</li>
-                                <li>Los elementos tienen atributos como descripción, orden, estimación y valor.</li>
-                                <li>Los elementos de mayor prioridad suelen estar más detallados.</li>
-                                <li>El <strong class="text-indigo-600">Objetivo del Producto (Product Goal)</strong> describe un estado futuro del producto y es el objetivo a largo plazo para el Equipo Scrum. El Product Backlog se utiliza para definir "qué" construirá el Equipo Scrum para alcanzar el Product Goal.</li>
-                            </ul>
+                            <p class="mb-2">Es la <strong class="text-green-700">lista única y ordenada de todo lo que se necesita para el producto</strong>: nuevas características, cambios, correcciones de errores, etc. El PO es el responsable. Es un artefacto vivo, siempre cambia y evoluciona.</p>
+                             <div class="example-box">
+                                <strong>Ejemplo de Product Backlog (para la app de recetas):</strong>
+                                <ol class="list-decimal list-inside text-sm">
+                                    <li>Como usuario, quiero registrarme con mi email. (Prioridad Alta)</li>
+                                    <li>Como usuario, quiero buscar recetas por nombre. (Prioridad Alta)</li>
+                                    <li>Como usuario, quiero ver videos de preparación de recetas. (Prioridad Media)</li>
+                                    <li>Como usuario, quiero compartir recetas en redes sociales. (Prioridad Baja)</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item mb-2">
@@ -627,15 +634,26 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2">Está compuesto por el <strong class="text-green-700">Objetivo del Sprint (Por qué)</strong>, el conjunto de <strong class="text-green-700">elementos del Product Backlog seleccionados para el Sprint (Qué)</strong>, más un <strong class="text-green-700">plan de acción para entregar el Incremento (Cómo)</strong>. Es un plan realizado por y para los Desarrolladores.</p>
-                            <p class="mb-2"><strong>Características:</strong></p>
-                            <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
-                                <li>Es una imagen visible en tiempo real del trabajo que el Equipo de Desarrollo planea llevar a cabo durante el Sprint.</li>
-                                <li>Emerge a lo largo del Sprint a medida que se aprende más.</li>
-                                <li>Solo el Equipo de Desarrollo puede cambiarlo durante un Sprint.</li>
-                                <li>Se utiliza para seguir el progreso del Sprint (ej. burndown chart).</li>
-                            </ul>
-                             <p class="mt-2 text-sm">El <strong class="text-indigo-600">Objetivo del Sprint (Sprint Goal)</strong> es el único objetivo para el Sprint. Aunque el Sprint Backlog es flexible, el Sprint Goal es un compromiso del Equipo de Desarrollo.</p>
+                            <p class="mb-2">Es el <strong class="text-green-700">conjunto de elementos del Product Backlog seleccionados para el Sprint</strong>, más el <strong class="text-green-700">plan del Equipo de Desarrollo para entregar esos elementos y alcanzar el Objetivo del Sprint</strong>. Lo crea y lo gestiona el Equipo de Desarrollo.</p>
+                            <div class="example-box">
+                                <strong>Ejemplo de Sprint Backlog (para el Sprint de "guardar recetas favoritas"):</strong>
+                                <ul>
+                                    <li><strong>Objetivo del Sprint:</strong> Permitir a los usuarios guardar y ver sus recetas favoritas.</li>
+                                    <li><strong>Elemento del Product Backlog 1:</strong> "Como usuario, quiero marcar una receta como favorita".
+                                        <ul class="list-disc list-inside ml-4 text-xs">
+                                            <li>Tarea: Diseñar icono de "favorito".</li>
+                                            <li>Tarea: Implementar lógica para guardar en base de datos.</li>
+                                            <li>Tarea: Añadir botón a la pantalla de receta.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Elemento del Product Backlog 2:</strong> "Como usuario, quiero ver mi lista de recetas favoritas".
+                                        <ul class="list-disc list-inside ml-4 text-xs">
+                                            <li>Tarea: Diseñar la pantalla de "Mis Favoritas".</li>
+                                            <li>Tarea: Obtener recetas favoritas de la base de datos.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item mb-2">
@@ -644,27 +662,28 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2">Es la <strong class="text-green-700">suma de todos los elementos del Product Backlog completados</strong> durante un Sprint y el valor de los incrementos de todos los Sprints anteriores. Al final de un Sprint, el nuevo Incremento debe estar <strong class="text-indigo-600">"Terminado"</strong> (utilizable y cumple la Definición de "Terminado").</p>
-                            <p class="mb-2"><strong>Características:</strong></p>
-                            <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
-                                <li>Debe estar en condiciones de ser utilizado, independientemente de si el Product Owner decide liberarlo o no.</li>
-                                <li>Cada Incremento se añade a todos los Incrementos anteriores y se prueba exhaustivamente para asegurar que todos funcionan juntos.</li>
-                                <li>Un Incremento es un paso concreto hacia el Objetivo del Producto.</li>
-                            </ul>
+                            <p class="mb-2">Es la <strong class="text-green-700">suma de todos los elementos del Product Backlog completados durante un Sprint</strong>, más el valor de los incrementos de Sprints anteriores. Debe estar "Terminado" (utilizable y cumple la Definición de "Terminado").</p>
+                            <div class="example-box">
+                                <strong>Ejemplo de Incremento:</strong> Al final del Sprint de "guardar recetas favoritas", el Incremento es la app de recetas con la nueva funcionalidad de marcar/desmarcar recetas como favoritas y una pantalla donde el usuario puede ver su lista de favoritas. Todo esto funciona y ha sido probado.
+                            </div>
                         </div>
                     </div>
                 </div>
                  <div class="card">
                      <h3 class="text-2xl font-semibold mb-4 text-green-600">Definición de "Terminado" (Definition of "Done" - DoD)</h3>
-                     <p class="mb-3">Es un <strong class="text-green-700">entendimiento formal y compartido</strong> de lo que significa que el trabajo esté completo para un Incremento del producto. Asegura la transparencia y la calidad.</p>
-                     <p class="mb-2">Cuando un elemento del Product Backlog o un Incremento se describe como "Terminado", todos deben entender qué significa.</p>
-                     <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
-                        <li>Si la DoD para un Incremento es parte de los estándares de la organización, todos los Equipos Scrum deben seguirla como mínimo.</li>
-                        <li>Si no es un estándar organizacional, el Equipo Scrum debe crear una DoD apropiada para el producto.</li>
-                        <li>Si múltiples Equipos Scrum trabajan en el mismo producto, deben definir y cumplir mutuamente la misma DoD.</li>
-                        <li>La DoD puede evolucionar y volverse más rigurosa a medida que el equipo madura.</li>
-                     </ul>
-                     <p class="mt-2 text-sm">La DoD guía al Equipo de Desarrollo en saber cuántos elementos del Product Backlog puede seleccionar durante el Sprint Planning. El propósito de cada Sprint es entregar Incrementos de funcionalidad que se ajustan a la DoD.</p>
+                     <p class="mb-3">Es un <strong class="text-green-700">acuerdo común dentro del Equipo Scrum sobre qué significa que un trabajo esté realmente completo y con la calidad esperada</strong>. Es una lista de criterios que deben cumplirse para que un elemento del Product Backlog o un Incremento se considere "Terminado".</p>
+                     <p class="mb-2">Ayuda a asegurar la transparencia y que todos tengan la misma expectativa sobre la calidad.</p>
+                     <div class="example-box">
+                        <strong>Ejemplo de Definición de "Terminado" (simple):</strong>
+                        <ul class="list-disc list-inside text-sm">
+                            <li>El código está escrito y subido al repositorio.</li>
+                            <li>Las pruebas unitarias pasan (ej. cubren el 80% del código nuevo).</li>
+                            <li>El código ha sido revisado por otro desarrollador (peer review).</li>
+                            <li>La funcionalidad ha sido probada por el Product Owner en el entorno de pruebas.</li>
+                            <li>La documentación necesaria (si aplica) está actualizada.</li>
+                        </ul>
+                        <p class="text-xs mt-1">Si una historia de usuario cumple todos estos puntos, entonces está "Terminada".</p>
+                    </div>
                 </div>
             </div>
 
@@ -672,53 +691,61 @@
                 <h2 class="text-3xl font-bold mb-6 text-purple-700">Módulo 3: Kanban - Visualizando el Flujo</h2>
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-purple-600">¿Qué es Kanban?</h3>
-                    <p class="mb-2">Kanban es un método para gestionar el flujo de trabajo, optimizando la entrega de valor al cliente. Su nombre proviene del japonés y significa "tarjeta visual" o "señal visual". Nació en el <strong class="text-indigo-600">Sistema de Producción de Toyota (TPS)</strong> a finales de los años 40, como parte del sistema "Just In Time" (Justo a Tiempo).</p>
-                    <p class="mb-2">El objetivo principal de Kanban es <strong class="text-teal-600">minimizar los desperdicios (Muda) y maximizar la eficiencia</strong>, enfocándose en entregar valor de forma continua. No es prescriptivo sobre roles o iteraciones fijas como Scrum, sino que se centra en la mejora continua del flujo existente.</p>
-                    <p>Un tablero Kanban básico visualiza el trabajo y se compone de columnas que representan los estados del flujo de trabajo (ej: "Por Hacer", "En Análisis", "En Desarrollo", "En Pruebas", "Hecho"). Las tareas (elementos de trabajo) se representan como tarjetas que se mueven a través de estas columnas a medida que progresan.</p>
+                    <p class="mb-2">Kanban es como un <strong class="text-indigo-600">sistema de gestión de tráfico para tu trabajo</strong>. Su objetivo es que el trabajo fluya de manera suave y eficiente, sin atascos. Nació en las fábricas de Toyota para mejorar la producción.</p>
+                    <p class="mb-2">La idea principal es <strong class="text-teal-600">visualizar tu trabajo, limitar la cantidad de cosas que haces a la vez (WIP), y enfocarte en terminar tareas antes de empezar nuevas</strong>.</p>
+                    <p>Se usa un <strong class="text-indigo-600">tablero Kanban</strong> (puede ser una pizarra o un software) con columnas que representan las etapas de tu proceso (Ej: "Por Hacer", "En Desarrollo", "En Pruebas", "Hecho"). Las tareas son "tarjetas" que se mueven por el tablero.</p>
+                     <div class="example-box">
+                        <strong>Ejemplo de Tablero Kanban (simple para tareas personales):</strong>
+                        <ul class="list-none">
+                            <li><strong>Columna "Pendiente":</strong> [Tarjeta: Comprar leche], [Tarjeta: Pagar factura luz]</li>
+                            <li><strong>Columna "En Proceso" (Límite WIP: 1):</strong> [Tarjeta: Preparar presentación trabajo]</li>
+                            <li><strong>Columna "Hecho":</strong> [Tarjeta: Enviar email a Juan]</li>
+                        </ul>
+                        Si quieres empezar "Pagar factura luz", pero "Preparar presentación" aún está "En Proceso" y el límite es 1, primero debes terminar la presentación.
+                    </div>
                 </div>
 
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-purple-600">Principios Fundamentales de Kanban</h3>
-                    <p class="mb-3">David J. Anderson, pionero en la aplicación de Kanban al desarrollo de software y trabajo de conocimiento, formuló el método Kanban con cuatro principios básicos:</p>
+                    <p class="mb-3">Son 4 ideas clave para empezar con Kanban:</p>
                     <ol class="list-decimal list-inside space-y-3 ml-4">
                         <li>
-                            <strong class="text-purple-700">Empezar con lo que se hace ahora:</strong>
-                            <p class="text-sm text-gray-600 ml-4">Kanban no requiere una revolución. Se puede aplicar sobre los flujos de trabajo y procesos existentes, respetando los roles y responsabilidades actuales. El objetivo es evolucionar gradualmente, no imponer cambios drásticos desde el inicio.</p>
+                            <strong class="text-purple-700">Empezar con lo que se hace ahora:</strong> No necesitas cambiar todo de golpe. Usa tus procesos actuales y visualízalos.
                         </li>
                         <li>
-                            <strong class="text-purple-700">Comprometerse a buscar e implementar cambios incrementales y evolutivos:</strong>
-                            <p class="text-sm text-gray-600 ml-4">La organización debe estar dispuesta a realizar pequeñas mejoras continuas. Los cambios radicales suelen encontrar resistencia; Kanban promueve una evolución paulatina y sostenible.</p>
+                            <strong class="text-purple-700">Comprometerse a buscar e implementar cambios incrementales y evolutivos:</strong> Mejorar poco a poco, continuamente.
                         </li>
                         <li>
-                            <strong class="text-purple-700">Respetar los procesos, roles, responsabilidades y cargos actuales:</strong>
-                            <p class="text-sm text-gray-600 ml-4">Kanban reconoce que los procesos, roles y responsabilidades existentes pueden tener valor y vale la pena conservarlos. No prohíbe el cambio, pero tampoco lo prescribe de forma disruptiva. Se busca la mejora colaborativa.</p>
+                            <strong class="text-purple-700">Respetar los procesos, roles y responsabilidades actuales:</strong> Kanban se adapta a ti, no al revés (al principio).
                         </li>
                         <li>
-                            <strong class="text-purple-700">Animar el liderazgo en todos los niveles:</strong>
-                            <p class="text-sm text-gray-600 ml-4">El liderazgo no se limita a la gerencia. Se fomenta que cualquier persona en la organización pueda proponer e impulsar mejoras (actos de liderazgo) para optimizar el flujo y la entrega de valor. Se promueve una mentalidad de mejora continua (Kaizen) en todos.</p>
+                            <strong class="text-purple-700">Animar el liderazgo en todos los niveles:</strong> Cualquiera puede proponer mejoras.
                         </li>
                     </ol>
                 </div>
                 
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-purple-600">Las 6 Prácticas Centrales de Kanban</h3>
-                     <p class="mb-3">Para una implementación exitosa y para que el sistema Kanban funcione eficazmente, se deben aplicar estas seis prácticas:</p>
+                     <p class="mb-3">Son las acciones concretas para hacer funcionar Kanban:</p>
                     <div class="accordion-item mb-2">
                         <div class="accordion-header">
                             <span class="font-medium text-lg">1. Visualizar el Flujo de Trabajo</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2 text-sm">Hacer visible el trabajo. Se utiliza un tablero Kanban (físico o digital) con columnas que representan los pasos del proceso (flujo de trabajo) y tarjetas para los elementos de trabajo. Esto permite ver dónde está cada tarea, identificar cuellos de botella y entender el flujo.</p>
+                            <p class="mb-2 text-sm">Usar el tablero Kanban para ver todas las tareas y en qué etapa están.</p>
                         </div>
                     </div>
                     <div class="accordion-item mb-2">
                         <div class="accordion-header">
-                            <span class="font-medium text-lg">2. Limitar el Trabajo en Proceso (WIP - Work In Progress)</span>
+                            <span class="font-medium text-lg">2. Limitar el Trabajo en Proceso (WIP)</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2 text-sm">Establecer límites explícitos a la cantidad de trabajo que puede estar en cada estado (columna) del flujo. Esto ayuda a evitar la sobrecarga, reduce el cambio de contexto, mejora el enfoque y hace visibles los problemas en el flujo (donde se acumula el trabajo). Si no hay límites WIP, no se está haciendo Kanban. Implementa un sistema "pull" (se tira del trabajo cuando hay capacidad).</p>
+                            <p class="mb-2 text-sm">Poner un límite al número de tareas que pueden estar en cada columna (excepto "Por Hacer" y "Hecho"). Esto evita que el equipo se sature y ayuda a que las tareas se terminen más rápido (reduce el "multitasking").</p>
+                            <div class="example-box text-xs">
+                                <strong>Ejemplo WIP Limit:</strong> Si la columna "En Desarrollo" tiene un límite WIP de 3, los desarrolladores no pueden tomar una nueva tarea para desarrollar si ya hay 3 tareas en esa columna. Deben ayudar a terminar una de esas 3 primero. Esto crea un sistema "pull" (se "tira" del trabajo cuando hay capacidad).
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item mb-2">
@@ -727,7 +754,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2 text-sm">Monitorear, medir y mejorar el flujo de trabajo. El objetivo es que el trabajo se mueva de manera suave y predecible a través del sistema. Se busca reducir el tiempo de ciclo (lead time) y aumentar la velocidad y continuidad del movimiento.</p>
+                            <p class="mb-2 text-sm">Observar cómo se mueven las tareas, dónde se atascan (cuellos de botella) y buscar formas de hacer que el flujo sea más rápido y predecible.</p>
                         </div>
                     </div>
                     <div class="accordion-item mb-2">
@@ -736,25 +763,25 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2 text-sm">Definir y hacer visibles las reglas y políticas del proceso (ej. qué significa "Hecho" para una columna, cómo se prioriza, cuándo se puede mover una tarjeta). Esto fomenta la comprensión compartida y la consistencia.</p>
+                            <p class="mb-2 text-sm">Definir claramente las reglas del proceso (Ej: ¿Qué significa que una tarea está "Lista para Pruebas"? ¿Cómo se priorizan las tareas?). Todos deben conocerlas.</p>
                         </div>
                     </div>
                     <div class="accordion-item mb-2">
                         <div class="accordion-header">
-                            <span class="font-medium text-lg">5. Implementar Circuitos de Retroalimentación (Feedback Loops)</span>
+                            <span class="font-medium text-lg">5. Implementar Circuitos de Retroalimentación</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2 text-sm">Establecer reuniones regulares para revisar el flujo, el rendimiento y las oportunidades de mejora. Ejemplos: reuniones diarias de pie (stand-ups) frente al tablero, revisiones de entrega de servicios, revisiones de operaciones, retrospectivas.</p>
+                            <p class="mb-2 text-sm">Tener reuniones regulares para revisar el sistema Kanban y cómo está funcionando (Ej: stand-ups diarias, revisiones del flujo, retrospectivas).</p>
                         </div>
                     </div>
                     <div class="accordion-item mb-2">
                         <div class="accordion-header">
-                            <span class="font-medium text-lg">6. Mejorar Colaborando, Evolucionar Experimentalmente (Usando Modelos y el Método Científico)</span>
+                            <span class="font-medium text-lg">6. Mejorar Colaborando, Evolucionar Experimentalmente</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2 text-sm">Fomentar la mejora continua a través de la colaboración, el uso de modelos (como la Teoría de las Restricciones) y la experimentación (PDCA - Plan-Do-Check-Act). Los equipos deben tener un entendimiento compartido de los problemas y sugerir acciones de mejora consensuadas.</p>
+                            <p class="mb-2 text-sm">Usar el método científico (hipótesis, experimento, medición, aprendizaje) para probar cambios y mejorar el sistema de forma colaborativa.</p>
                         </div>
                     </div>
                 </div>
@@ -764,45 +791,53 @@
                 <h2 class="text-3xl font-bold mb-6 text-indigo-700">Módulo 4: Historias de Usuario y Planificación Ágil</h2>
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-indigo-600">Historias de Usuario (User Stories)</h3>
-                    <p class="mb-2">Las Historias de Usuario son descripciones cortas y simples de una funcionalidad contada desde la perspectiva de la persona que desea la nueva capacidad, usualmente un usuario o cliente del sistema. Son una forma de expresar requisitos en un lenguaje comprensible para todos y fomentar la conversación.</p>
-                    <p class="mb-2">Surgieron en eXtreme Programming (XP) como respuesta a la documentación extensiva y a la falta de comunicación cara a cara.</p>
-                    <p class="mb-2">Se componen de 3 elementos clave, conocidos como las <strong class="text-teal-600">"Tres C's"</strong>:</p>
+                    <p class="mb-2">Son una forma simple de describir lo que un usuario quiere hacer con el software y por qué. En vez de un documento técnico largo, es una frase corta que inicia una conversación.</p>
+                    <p class="mb-2">Las 3 "C":</p>
                     <ul class="icon-list ml-4 space-y-2 mb-3">
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sticky-note"><path d="M16 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8Z"/><path d="M15 3v4a2 2 0 0 0 2 2h4"/></svg>
-                            <div><strong class="text-indigo-700">Card (Tarjeta):</strong> La historia se escribe en una tarjeta física o digital. Debe ser breve. Si no cabe, es una señal de que es demasiado grande o compleja y necesita dividirse.</div>
+                            <div><strong class="text-indigo-700">Card (Tarjeta):</strong> La historia escrita (Ej: en un post-it).</div>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-more"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
-                            <div><strong class="text-indigo-700">Conversation (Conversación):</strong> La tarjeta es una invitación a una conversación. Los detalles emergen del diálogo continuo entre el equipo, el Product Owner y otros stakeholders. La comunicación cara a cara es fundamental.</div>
+                            <div><strong class="text-indigo-700">Conversation (Conversación):</strong> El equipo habla con el PO para entender los detalles.</div>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
-                            <div><strong class="text-indigo-700">Confirmation (Confirmación):</strong> Son los <strong class="text-teal-600">Criterios de Aceptación</strong>. Definen las condiciones que la historia debe cumplir para ser considerada "Terminada" y aceptada. Ayudan a verificar que la funcionalidad se ha implementado correctamente.</div>
+                            <div><strong class="text-indigo-700">Confirmation (Confirmación):</strong> Los <strong class="text-teal-600">Criterios de Aceptación</strong> (cómo sabremos que está bien hecha).</div>
                         </li>
                     </ul>
-                    <p class="mb-2"><strong>Formato común (plantilla de Mike Cohn):</strong></p>
+                    <p class="mb-2"><strong>Formato común:</strong></p>
                     <blockquote class="border-l-4 border-indigo-500 pl-4 py-2 my-2 bg-indigo-50">
-                        Como <code class="bg-indigo-200 px-1 rounded text-sm text-indigo-800">[ROL / TIPO DE USUARIO]</code><br>
-                        Necesito / Quiero <code class="bg-indigo-200 px-1 rounded text-sm text-indigo-800">[FUNCIONALIDAD / ACCIÓN]</code><br>
-                        Para <code class="bg-indigo-200 px-1 rounded text-sm text-indigo-800">[BENEFICIO / OBJETIVO / RAZÓN]</code>.
+                        Como <code class="bg-indigo-200 px-1 rounded text-sm text-indigo-800">[ROL]</code><br>
+                        Quiero <code class="bg-indigo-200 px-1 rounded text-sm text-indigo-800">[ACCIÓN/FUNCIONALIDAD]</code><br>
+                        Para <code class="bg-indigo-200 px-1 rounded text-sm text-indigo-800">[BENEFICIO]</code>.
                     </blockquote>
-                    <p class="text-sm mt-2">Ejemplo: "Como <span class="text-blue-600">estudiante</span>, necesito <span class="text-blue-600">comprar un pase de estacionamiento</span> para poder <span class="text-blue-600">estacionar mi vehículo en la universidad</span>."</p>
+                     <div class="example-box">
+                        <strong>Ejemplo de Historia de Usuario (para una tienda online):</strong>
+                        <p>"Como <span class="text-blue-600">comprador registrado</span>, quiero <span class="text-blue-600">guardar productos en una lista de deseos</span> para poder <span class="text-blue-600">comprarlos más tarde</span>."</p>
+                        <strong>Criterios de Aceptación (ejemplos):</strong>
+                        <ul class="list-disc list-inside text-xs">
+                            <li>Debe haber un botón "Añadir a Lista de Deseos" en la página de cada producto.</li>
+                            <li>El usuario debe poder ver su lista de deseos desde su perfil.</li>
+                            <li>El usuario debe poder eliminar productos de su lista de deseos.</li>
+                        </ul>
+                    </div>
                     
                     <div class="accordion-item mt-4">
                         <div class="accordion-header bg-indigo-100 hover:bg-indigo-200">
-                            <span class="font-medium text-indigo-700">Criterios INVEST para buenas Historias de Usuario</span>
+                            <span class="font-medium text-indigo-700">Criterios INVEST</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="mb-2 text-sm">El acrónimo INVEST, propuesto por Bill Wake, ayuda a recordar las características de una buena historia de usuario:</p>
+                            <p class="mb-2 text-sm">Una buena historia de usuario cumple con INVEST:</p>
                             <ul class="list-disc list-inside space-y-1 text-sm">
-                                <li><strong>I</strong>ndependiente: En la medida de lo posible, las historias no deben tener dependencias entre sí para poder planificarlas y desarrollarlas en cualquier orden.</li>
-                                <li><strong>N</strong>egociable: No son un contrato fijo. Los detalles y el alcance pueden (y deben) negociarse y evolucionar a través de la conversación.</li>
-                                <li><strong>V</strong>alorable: Deben aportar valor tangible al cliente, usuario o negocio. Si no aporta valor, ¿por qué hacerla?</li>
-                                <li><strong>E</strong>stimable: El equipo de desarrollo debe ser capaz de estimar el esfuerzo necesario para completarla. Si no se puede estimar, puede ser demasiado grande, poco clara o requerir investigación (spike).</li>
-                                <li><strong>S</strong>mall (Pequeña): Deben ser lo suficientemente pequeñas para poder completarse dentro de una iteración (Sprint). Las historias grandes (Epics) deben dividirse.</li>
-                                <li><strong>T</strong>estable (Verificable): Deben tener criterios de aceptación claros que permitan verificar si se ha completado correctamente. Si no se puede probar, no se sabe si está "Terminada".</li>
+                                <li><strong>I</strong>ndependiente: No depende de otras.</li>
+                                <li><strong>N</strong>egociable: Se puede discutir y cambiar.</li>
+                                <li><strong>V</strong>alorable: Aporta valor al usuario.</li>
+                                <li><strong>E</strong>stimable: El equipo puede calcular cuánto esfuerzo lleva.</li>
+                                <li><strong>S</strong>mall (Pequeña): Se puede hacer en un Sprint.</li>
+                                <li><strong>T</strong>estable: Se puede probar que funciona.</li>
                             </ul>
                         </div>
                     </div>
@@ -810,26 +845,14 @@
                 
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-indigo-600">Estimación Ágil</h3>
-                     <p class="mb-3">En los enfoques ágiles, la estimación se centra en el <strong class="text-teal-600">esfuerzo relativo</strong> más que en predicciones de tiempo absoluto (horas/días), especialmente para elementos del Product Backlog. Esto reconoce la incertidumbre inherente al desarrollo de software.</p>
+                     <p class="mb-3">En vez de decir "esto tardará 10 horas", en Agile se estima el <strong class="text-teal-600">tamaño o esfuerzo relativo</strong> de las historias. Es como decir "esta tarea es el doble de grande que aquella otra".</p>
                     <div class="accordion-item mb-2">
-                        <div class="accordion-header bg-indigo-100 hover:bg-indigo-200">
-                            <span class="font-medium text-indigo-700">Cono de la Incertidumbre</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
-                        </div>
-                        <div class="accordion-content bg-white">
-                            <p class="text-sm mb-2">Describe cómo la incertidumbre en las estimaciones disminuye a medida que avanza un proyecto y se obtiene más información. Al inicio, la incertidumbre es muy alta (las estimaciones pueden variar hasta un +/- 400%). Intentar ser preciso al principio es poco realista.</p>
-                            <p class="text-sm">Las metodologías ágiles abordan esto comenzando a trabajar pronto, aprendiendo y refinando estimaciones progresivamente (elaboración progresiva).</p>
-                        </div>
-                    </div>
-                     <div class="accordion-item mb-2">
                         <div class="accordion-header bg-indigo-100 hover:bg-indigo-200">
                             <span class="font-medium text-indigo-700">Puntos de Historia (Story Points)</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="text-sm mb-2">Son una unidad de medida abstracta utilizada por los equipos ágiles para estimar el esfuerzo relativo necesario para implementar una historia de usuario. Consideran la complejidad, la cantidad de trabajo, la incertidumbre y el riesgo.</p>
-                            <p class="text-sm mb-2">No se traducen directamente a horas. Una historia de 2 puntos no necesariamente toma el doble de tiempo que una de 1 punto, pero sí representa aproximadamente el doble de esfuerzo/complejidad.</p>
-                            <p class="text-sm">Se suele usar una escala basada en la <strong class="text-blue-600">secuencia de Fibonacci</strong> (0, 1, 2, 3, 5, 8, 13, 21, 40, 100) para reflejar la creciente incertidumbre en estimaciones más grandes.</p>
+                            <p class="text-sm mb-2">Son números que representan el esfuerzo (complejidad, cantidad de trabajo, incertidumbre). Se usa la secuencia de Fibonacci (1, 2, 3, 5, 8, 13...) porque refleja que estimar cosas grandes es más incierto.</p>
                         </div>
                     </div>
                     <div class="accordion-item mb-2">
@@ -838,16 +861,17 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="text-sm mb-2">Es una técnica de estimación basada en el consenso, popularizada por Mike Cohn, que utiliza puntos de historia. Se basa en el método Wideband Delphi.</p>
-                            <ol class="list-decimal list-inside text-sm space-y-1">
-                                <li>El Product Owner presenta una historia de usuario.</li>
-                                <li>Los miembros del equipo discuten la historia y hacen preguntas.</li>
-                                <li>Cada miembro elige en secreto una carta con un valor de la escala de estimación (ej. Fibonacci) que representa su estimación.</li>
-                                <li>Todos revelan sus cartas simultáneamente.</li>
-                                <li>Si las estimaciones varían significativamente, los que dieron los valores más altos y más bajos explican sus razonamientos.</li>
-                                <li>Se repite el proceso de estimación hasta que se alcanza un consenso o las estimaciones convergen lo suficiente.</li>
-                            </ol>
-                            <p class="text-sm mt-2">Fomenta la participación de todos, aprovecha la "sabiduría de la multitud" y ayuda a descubrir supuestos y malentendidos.</p>
+                            <p class="text-sm mb-2">Es un juego para estimar en equipo. Cada uno tiene cartas con los números de Fibonacci. Se presenta una historia, todos eligen una carta en secreto, y luego las muestran a la vez. Si hay mucha diferencia, se discute y se vuelve a votar hasta llegar a un acuerdo.</p>
+                             <div class="example-box text-xs">
+                                <strong>Ejemplo de Planning Poker:</strong>
+                                <ol>
+                                    <li>PO explica: "Como usuario, quiero pagar con tarjeta de crédito".</li>
+                                    <li>Equipo discute.</li>
+                                    <li>Votación: Ana (5), Luis (8), Carla (3).</li>
+                                    <li>Discusión: Carla pensó que era simple. Luis consideró la seguridad y las pruebas. Ana está en medio.</li>
+                                    <li>Nueva votación: Ana (5), Luis (5), Carla (5). ¡Consenso! La historia vale 5 puntos.</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -855,30 +879,15 @@
                     <h3 class="text-2xl font-semibold mb-4 text-indigo-600">Planificación de Releases y Sprints</h3>
                      <div class="accordion-item mb-2">
                         <div class="accordion-header bg-indigo-100 hover:bg-indigo-200">
-                            <span class="font-medium text-indigo-700">Minimum Marketable Feature (MMF)</span>
+                            <span class="font-medium text-indigo-700">Release Plan</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="text-sm">Es el conjunto más pequeño posible de funcionalidad que, por sí misma, tiene valor en el mercado o para el usuario. Ayuda a definir el alcance de las primeras entregas para obtener feedback temprano.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item mb-2">
-                        <div class="accordion-header bg-indigo-100 hover:bg-indigo-200">
-                            <span class="font-medium text-indigo-700">Release Plan (Plan de Liberación)</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
-                        </div>
-                        <div class="accordion-content bg-white">
-                            <p class="text-sm mb-2">Es un plan de alto nivel que indica qué funcionalidades se entregarán en qué releases (conjuntos de Sprints). Se define en función de las prioridades del Product Owner, la duración de los Sprints y la <strong class="text-blue-600">velocidad del equipo</strong> (cantidad de trabajo que el equipo puede completar en un Sprint, medida en puntos de historia).</p>
-                            <p class="text-sm">El Release Plan no es fijo y se actualiza a medida que se aprende más.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item mb-2">
-                        <div class="accordion-header bg-indigo-100 hover:bg-indigo-200">
-                            <span class="font-medium text-indigo-700">Sprint 0</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
-                        </div>
-                        <div class="accordion-content bg-white">
-                            <p class="text-sm">Es un concepto utilizado por algunos equipos para referirse a un período inicial (antes del primer Sprint de desarrollo) donde se realizan tareas de preparación: configuración de entornos, diseño de arquitectura inicial, creación del Product Backlog inicial, etc. No es un evento oficial de Scrum, pero es una práctica común.</p>
+                            <p class="text-sm mb-2">Un plan de alto nivel sobre qué se entregará en varios Sprints. Ayuda a dar una idea general de cuándo estarán listas ciertas funcionalidades importantes.</p>
+                            <p class="text-sm">Se basa en la <strong class="text-blue-600">velocidad del equipo</strong> (cuántos puntos de historia suele completar el equipo por Sprint).</p>
+                            <div class="example-box text-xs">
+                                <strong>Ejemplo de Velocidad y Release Plan:</strong> Si un equipo completa en promedio 20 puntos de historia por Sprint (su velocidad es 20), y el Product Backlog tiene 100 puntos en total para la primera versión (Release 1), se podría estimar que Release 1 tomará unos 5 Sprints (100 / 20 = 5).
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -888,53 +897,46 @@
                 <h2 class="text-3xl font-bold mb-6 text-red-700">Módulo 5: Gestión de Riesgos</h2>
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-red-600">Proceso de Gestión de Riesgos</h3>
-                    <p class="mb-3">La gestión de riesgos es el proceso de identificar, evaluar y controlar amenazas a los objetivos de un proyecto. En el desarrollo de software, los riesgos pueden ser técnicos, de mercado, organizacionales, etc. Aunque los métodos ágiles son adaptativos, una gestión proactiva de riesgos sigue siendo crucial.</p>
-                    <p class="mb-3">Pasos clave en la gestión de riesgos:</p>
+                    <p class="mb-3">Gestionar riesgos es como <strong class="text-indigo-600">mirar el pronóstico del tiempo antes de un viaje largo</strong>. Quieres saber qué podría salir mal para estar preparado. En software, los "malos tiempos" pueden ser problemas técnicos, que un miembro clave del equipo se vaya, o que un competidor lance algo similar antes.</p>
+                    <p class="mb-3">Pasos clave:</p>
                     <ol class="list-decimal list-inside space-y-3 ml-4">
                         <li>
                             <div class="flex items-center text-red-700 mb-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-slash mr-2"><path d="m13.5 8.5-5 5"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                                <strong class="text-lg">Identificar el Riesgo:</strong>
+                                <strong class="text-lg">Identificar:</strong> ¿Qué podría salir mal? (Ej: "El nuevo programador podría tardar en aprender el sistema").
                             </div>
-                            <p class="text-sm text-gray-600 ml-8">Consiste en reconocer y documentar los eventos potenciales (amenazas u oportunidades) que podrían impactar positiva o negativamente los objetivos del proyecto. Se pueden usar técnicas como brainstorming, checklists, lecciones aprendidas de proyectos anteriores, análisis DAFO (SWOT), etc. Involucra al equipo, Product Owner, Scrum Master y stakeholders.</p>
                         </li>
                         <li>
                             <div class="flex items-center text-red-700 mb-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bar-chart-3 mr-2"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
-                                <strong class="text-lg">Evaluar el Riesgo (Análisis):</strong>
+                                <strong class="text-lg">Evaluar:</strong> ¿Qué tan probable es y qué tan grave sería? (Ej: "Probabilidad: Media. Impacto: Retraso de 1 semana").
                             </div>
-                            <p class="text-sm text-gray-600 ml-8">Una vez identificados, se analiza la <strong class="text-blue-600">probabilidad de ocurrencia</strong> de cada riesgo y el <strong class="text-blue-600">impacto</strong> (o consecuencia) que tendría si se materializa. El impacto puede ser en costo, tiempo, alcance, calidad, etc. Se pueden usar escalas cualitativas (Alto, Medio, Bajo) o cuantitativas.</p>
                         </li>
                         <li>
                              <div class="flex items-center text-red-700 mb-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-ordered mr-2"><line x1="10" x2="21" y1="6" y2="6"/><line x1="10" x2="21" y1="12" y2="12"/><line x1="10" x2="21" y1="18" y2="18"/><path d="M4 6h1v4"/><path d="M4 10h2"/><path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
-                                <strong class="text-lg">Ordenamiento/Priorización de Riesgos:</strong>
+                                <strong class="text-lg">Priorizar:</strong> ¿Cuáles son los riesgos más feos? Enfocarse en esos.
                             </div>
-                            <p class="text-sm text-gray-600 ml-8">Clasificar los riesgos según su severidad, que es una combinación de su probabilidad e impacto (ej. usando una matriz de Probabilidad-Impacto). Esto ayuda a enfocar los esfuerzos y recursos en los riesgos más críticos.</p>
                         </li>
                         <li>
                             <div class="flex items-center text-red-700 mb-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list mr-2"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
-                                <strong class="text-lg">Planificación de Respuestas al Riesgo:</strong>
+                                <strong class="text-lg">Planificar Respuestas:</strong> ¿Qué hacemos al respecto?
                             </div>
-                            <p class="text-sm text-gray-600 ml-8">Para cada riesgo prioritario, se define una estrategia de respuesta. Las estrategias comunes para amenazas incluyen:</p>
-                                <ul class="list-disc list-inside ml-12 text-xs text-gray-500 my-1">
-                                    <li><strong>Mitigar:</strong> Tomar acciones para reducir la probabilidad de ocurrencia del riesgo o su impacto. (Ej: realizar pruebas adicionales, capacitar al equipo).</li>
-                                    <li><strong>Evitar:</strong> Cambiar los planes para eliminar el riesgo por completo o proteger los objetivos del proyecto de su impacto. (Ej: cambiar de tecnología, eliminar una característica riesgosa).</li>
-                                    <li><strong>Transferir:</strong> Trasladar el impacto negativo del riesgo (y la propiedad de la respuesta) a un tercero. (Ej: contratar un seguro, subcontratar una parte del trabajo).</li>
-                                    <li><strong>Aceptar:</strong> Reconocer la existencia del riesgo y no tomar ninguna acción a menos que el riesgo ocurra. Se usa para riesgos de baja prioridad o cuando el costo de la respuesta es mayor que el impacto. Puede ser activa (desarrollar un plan de contingencia) o pasiva (sin plan).</li>
+                            <ul class="list-disc list-inside ml-12 text-xs text-gray-500 my-1">
+                                    <li><strong>Mitigar:</strong> Reducir la chance o el daño. (Ej: "Ponerle un mentor al nuevo programador").</li>
+                                    <li><strong>Evitar:</strong> Eliminar el riesgo. (Ej: "No usar esa tecnología nueva y riesgosa").</li>
+                                    <li><strong>Transferir:</strong> Que otro se encargue. (Ej: "Contratar un seguro").</li>
+                                    <li><strong>Aceptar:</strong> Asumirlo y ya. (Ej: "Si llueve un poco, nos mojamos, no pasa nada grave").</li>
                                 </ul>
-                            <p class="text-sm text-gray-600 ml-8">También se pueden definir <strong class="text-blue-600">planes de contingencia</strong> (qué hacer si el riesgo se materializa).</p>
                         </li>
                         <li>
                             <div class="flex items-center text-red-700 mb-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-repeat mr-2"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>
-                                <strong class="text-lg">Monitoreo y Control (o Implementar Respuestas y Monitorear):</strong>
+                                <strong class="text-lg">Monitorear y Controlar:</strong> Seguir vigilando los riesgos y ver si los planes funcionan.
                             </div>
-                            <p class="text-sm text-gray-600 ml-8">Implementar los planes de respuesta a los riesgos. Seguir de cerca los riesgos identificados, monitorear los riesgos residuales, identificar la aparición de nuevos riesgos, y evaluar la efectividad del proceso de gestión de riesgos a lo largo del proyecto. En Scrum, la Daily Scrum, Sprint Review y Sprint Retrospective son oportunidades para revisar y discutir riesgos.</p>
                         </li>
                     </ol>
-                    <p class="mt-4 p-3 bg-red-50 border border-red-200 rounded-md text-sm">Recuerda: Los riesgos tienen un <strong class="text-red-600">impacto</strong> y una <strong class="text-red-600">probabilidad de ocurrencia</strong> que los definen. Se pueden tratar por medio de planes de contingencia para minimizar su impacto o planes para tratar de evitar su ocurrencia.</p>
                 </div>
             </div>
 
@@ -977,7 +979,6 @@
                     link.classList.add('active');
                 }
             });
-             // Scroll to top of main content area
             document.querySelector('.main-content').scrollTop = 0;
         }
 
@@ -986,13 +987,12 @@
                 event.preventDefault();
                 const moduleId = link.dataset.module;
                 showModule(moduleId);
-                if (window.innerWidth < 1024) { // Tailwind's lg breakpoint
+                if (window.innerWidth < 1024) { 
                     appContainer.classList.add('sidebar-closed');
                 }
             });
         });
 
-        // Sidebar toggle for mobile
         openSidebarBtn.addEventListener('click', () => {
             appContainer.classList.remove('sidebar-closed');
         });
@@ -1001,24 +1001,17 @@
             appContainer.classList.add('sidebar-closed');
         });
         
-        // Initialize sidebar state for mobile
         if (window.innerWidth < 1024) {
             appContainer.classList.add('sidebar-closed');
         } else {
             appContainer.classList.remove('sidebar-closed');
         }
         window.addEventListener('resize', () => {
-            if (window.innerWidth < 1024) {
-                // No cerramos automáticamente la sidebar en resize si estaba abierta,
-                // para no interrumpir al usuario si la abrió intencionalmente.
-                // Solo la cerramos por defecto al cargar en móvil.
-            } else {
-                appContainer.classList.remove('sidebar-closed'); // Abrir en desktop
+            if (window.innerWidth >= 1024) {
+                appContainer.classList.remove('sidebar-closed');
             }
         });
 
-
-        // Accordion functionality
         const accordionItems = document.querySelectorAll('.accordion-item');
         accordionItems.forEach(item => {
             const header = item.querySelector('.accordion-header');
@@ -1027,7 +1020,6 @@
             });
         });
 
-        // --- Quiz Data and Functionality ---
         const quizData = [
             {
                 question: "Las metodologías Prescriptivas y ágiles:",
@@ -1102,8 +1094,8 @@
         let userAnswers = [];
 
         function loadQuiz() {
-            quizContainer.innerHTML = ''; // Clear previous quiz if any
-            userAnswers = []; // Reset answers
+            quizContainer.innerHTML = ''; 
+            userAnswers = []; 
             quizData.forEach((q, index) => {
                 userAnswers[index] = null; 
                 const questionDiv = document.createElement('div');
@@ -1127,10 +1119,9 @@
                 });
                 quizContainer.appendChild(questionDiv);
             });
-             quizResultsDiv.innerHTML = ''; // Clear previous results display
+             quizResultsDiv.innerHTML = ''; 
              submitQuizBtn.disabled = false;
              submitQuizBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-
         }
         
         submitQuizBtn.addEventListener('click', () => {
@@ -1152,14 +1143,14 @@
                 }
 
                 optionsInBlock.forEach(optElement => {
-                    optElement.classList.remove('selected', 'border-blue-500', 'bg-blue-100'); // Clear selection style
+                    optElement.classList.remove('selected', 'border-blue-500', 'bg-blue-100'); 
                     if (optElement.textContent === correctAnswer) {
                         optElement.classList.add('correct');
                     }
                     if (userAnswers[index] === optElement.textContent && optElement.textContent !== correctAnswer) {
                         optElement.classList.add('incorrect');
                     }
-                    optElement.style.pointerEvents = 'none'; // Disable further clicks
+                    optElement.style.pointerEvents = 'none'; 
                 });
                 
                 const explanationP = document.createElement('p');
@@ -1188,23 +1179,17 @@
             submitQuizBtn.classList.add('opacity-50', 'cursor-not-allowed');
         });
 
-        // Load the first module and quiz on page load
         showModule('introduccion');
-        // Ensure quiz loads if autoevaluacion is the active tab from the start or when switched to
         navLinks.forEach(link => {
             link.addEventListener('click', (event) => {
                 if (link.dataset.module === 'autoevaluacion') {
-                    // Check if quiz is already loaded to avoid reloading unnecessarily
-                    // For simplicity, we'll just call loadQuiz. If performance becomes an issue, add a check.
                     loadQuiz();
                 }
             });
         });
-         // If the initial active module is autoevaluacion, load the quiz.
         if (document.querySelector('.nav-link.active').dataset.module === 'autoevaluacion') {
             loadQuiz();
         }
-
     </script>
 </body>
 </html>
