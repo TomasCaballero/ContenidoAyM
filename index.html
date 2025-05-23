@@ -1453,7 +1453,7 @@
                     "Scrum, XP, prototipado, iterativa",
                     "Scrum, XP, en V, incremental, iterativa, espiral",
                     "Scrum, XP",
-                    "Ninguna es correcta" 
+                    "Ninguna es correcta"
                 ],
                 answer: "Scrum, XP",
                 explanation: "Scrum y XP (eXtreme Programming) son dos de las metodologías ágiles más conocidas y utilizadas. Prototipado, iterativa, incremental y espiral son modelos o enfoques que pueden ser parte de metodologías, pero no son metodologías ágiles en sí mismas de la misma forma que Scrum o XP. El modelo en V es tradicional."
@@ -1498,8 +1498,82 @@
                 ],
                 answer: "Product Backlog, Sprint Backlog e Incremento",
                 explanation: "Los tres artefactos oficiales de Scrum que representan trabajo o valor son el Product Backlog, el Sprint Backlog y el Incremento."
+            },
+            // --- Nuevas Preguntas ---
+            {
+                question: "En el framework Cynefin, ¿en qué dominio son más efectivas las metodologías ágiles como Scrum?",
+                options: ["Simple", "Complicado", "Complejo", "Caótico"],
+                answer: "Complejo",
+                explanation: "El dominio Complejo, donde la relación causa-efecto solo se entiende en retrospectiva y se requiere experimentación, es donde las prácticas emergentes de Agile y Scrum son más adecuadas."
+            },
+            {
+                question: "Según el Manifiesto Ágil, se valora más 'Respuesta ante el cambio' sobre:",
+                options: ["Procesos y herramientas", "Documentación exhaustiva", "Negociación contractual", "Seguir un plan"],
+                answer: "Seguir un plan",
+                explanation: "El cuarto valor del Manifiesto Ágil es: 'Respuesta ante el cambio sobre seguir un plan'."
+            },
+            {
+                question: "¿Cuál es el propósito principal de limitar el WIP (Trabajo en Proceso) en Kanban?",
+                options: ["Asegurar que todos los miembros del equipo estén siempre ocupados", "Facilitar la multitarea para aumentar la producción", "Evitar la sobrecarga, mejorar el enfoque y hacer visibles los cuellos de botella en el flujo", "Reemplazar la necesidad de un Scrum Master"],
+                answer: "Evitar la sobrecarga, mejorar el enfoque y hacer visibles los cuellos de botella en el flujo",
+                explanation: "Limitar el WIP es una práctica central de Kanban para crear un sistema pull, reducir el cambio de contexto, mejorar el flujo y exponer problemas."
+            },
+            {
+                question: "La técnica de priorización MoSCoW clasifica los requisitos en categorías. ¿Cuál de las siguientes NO es una categoría MoSCoW?",
+                options: ["Must have", "Should have", "Could have", "Nice to have", "Won't have"],
+                answer: "Nice to have",
+                explanation: "Las categorías de MoSCoW son: Must have (Debe tener), Should have (Debería tener), Could have (Podría tener), y Won't have (No tendrá esta vez)."
+            },
+            {
+                question: "Un Sprint puede ser cancelado si el Objetivo del Sprint se vuelve obsoleto. ¿Quién tiene la autoridad para cancelar un Sprint?",
+                options: ["El Scrum Master", "El Equipo de Desarrollo por consenso", "El Product Owner", "Un Stakeholder principal"],
+                answer: "El Product Owner",
+                explanation: "Solo el Product Owner tiene la autoridad para cancelar el Sprint, aunque puede hacerlo bajo la influencia de otros."
+            },
+            {
+                question: "La Definición de 'Terminado' (DoD) en Scrum es creada por:",
+                options: ["El Product Owner exclusivamente", "El Scrum Master exclusivamente", "La organización, y es inmutable", "El Equipo Scrum (si no es un estándar organizacional, los Desarrolladores la crean o la definen conjuntamente si hay varios equipos)"],
+                answer: "El Equipo Scrum (si no es un estándar organizacional, los Desarrolladores la crean o la definen conjuntamente si hay varios equipos)",
+                explanation: "Si la DoD no es un estándar de la organización, el Equipo Scrum (específicamente los Desarrolladores) debe crear una Definición de 'Terminado' apropiada para el producto. Si hay múltiples equipos, deben definirla conjuntamente."
+            },
+            {
+                question: "¿Qué representa la 'velocidad' de un equipo en Scrum?",
+                options: ["Qué tan rápido escriben código los desarrolladores individualmente", "La cantidad de horas trabajadas por el equipo en un Sprint", "Una medida de la cantidad de trabajo del Product Backlog que un equipo puede convertir en un Incremento 'Terminado' durante un Sprint", "El número de bugs corregidos en un Sprint"],
+                answer: "Una medida de la cantidad de trabajo del Product Backlog que un equipo puede convertir en un Incremento 'Terminado' durante un Sprint",
+                explanation: "La velocidad es una medida del output del equipo, generalmente en puntos de historia, y se usa para la planificación y proyecciones, basada en el trabajo 'Terminado' en Sprints anteriores."
+            },
+            {
+                question: "En User Story Mapping, ¿qué representa la 'columna vertebral' (backbone) del mapa?",
+                options: ["Las tareas técnicas detalladas", "Los criterios de aceptación de cada historia", "Las actividades de usuario de alto nivel o épicas que estructuran el viaje del usuario", "Los riesgos asociados a cada release"],
+                answer: "Las actividades de usuario de alto nivel o épicas que estructuran el viaje del usuario",
+                explanation: "La columna vertebral del User Story Map está formada por las actividades principales o épicas que el usuario realiza, ordenadas secuencialmente para representar su flujo narrativo."
+            },
+            {
+                question: "La técnica de Impact Mapping ayuda a los equipos a:",
+                options: ["Estimar el esfuerzo de las historias de usuario con precisión", "Visualizar el flujo de trabajo y limitar el WIP", "Alinear las entregas de software con los objetivos de negocio, enfocándose en los impactos deseados", "Gestionar los impedimentos diarios del equipo"],
+                answer: "Alinear las entregas de software con los objetivos de negocio, enfocándose en los impactos deseados",
+                explanation: "Impact Mapping conecta los objetivos de negocio (¿Por qué?) con los actores (¿Quién?), los cambios de comportamiento deseados (¿Cómo?) y los entregables (¿Qué?) que pueden generar esos impactos."
+            },
+            {
+                question: "En el contexto del Triángulo de Hierro (Alcance, Tiempo, Costo), ¿cuál es la principal variable flexible en los proyectos Ágiles?",
+                options: ["Tiempo (los Sprints pueden alargarse si es necesario)", "Costo (se pueden añadir más personas fácilmente)", "Alcance (se prioriza y se ajusta lo que se entrega en un tiempo y costo fijos)", "Calidad (se puede reducir para cumplir plazos)"],
+                answer: "Alcance (se prioriza y se ajusta lo que se entrega en un tiempo y costo fijos)",
+                explanation: "En Agile, generalmente se fijan el Tiempo (iteraciones) y el Costo (equipo), siendo el Alcance la variable que se ajusta para entregar el máximo valor posible dentro de esas restricciones, sin comprometer la calidad."
+            },
+            {
+                question: "¿Cuál de las siguientes es una estrategia de respuesta a un RIESGO NEGATIVO (amenaza)?",
+                options: ["Explorar", "Mejorar", "Compartir (para oportunidades)", "Mitigar"],
+                answer: "Mitigar",
+                explanation: "Para riesgos negativos (amenazas), las estrategias comunes son Evitar, Transferir, Mitigar y Aceptar. Explorar, Mejorar y Compartir son estrategias para riesgos positivos (oportunidades)."
+            },
+            {
+                question: "El concepto de 'Sprint 0' o Incepción en proyectos ágiles se refiere principalmente a:",
+                options: ["El primer Sprint donde se entrega la funcionalidad más crítica al cliente", "Un período de prueba donde el equipo decide si usar Scrum o no", "Un período de preparación antes del primer Sprint de desarrollo para configurar entornos, crear un backlog inicial y alinear al equipo", "Un Sprint dedicado exclusivamente a corregir bugs antes del lanzamiento"],
+                answer: "Un período de preparación antes del primer Sprint de desarrollo para configurar entornos, crear un backlog inicial y alinear al equipo",
+                explanation: "Aunque no es un evento formal de Scrum, el Sprint 0 o Incepción es una práctica común para realizar actividades de preparación necesarias antes de comenzar los Sprints de desarrollo regulares."
             }
         ];
+
 
         const quizContainer = document.getElementById('quiz-container');
         const submitQuizBtn = document.getElementById('submit-quiz-btn');
