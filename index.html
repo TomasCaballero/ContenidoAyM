@@ -160,6 +160,13 @@
         .example-box ul, .example-box ol {
             margin-left: 1rem;
         }
+        .sub-card {
+            background-color: #f9fafb; /* gray-50 */
+            border: 1px solid #e5e7eb; /* gray-200 */
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -189,6 +196,10 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
                         Historias y Estimación
                     </a></li>
+                     <li><a href="#" class="nav-link" data-module="planificacion_agil">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+                        Planificación Ágil Avanzada
+                    </a></li>
                     <li><a href="#" class="nav-link" data-module="riesgos">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-alert"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
                         Gestión de Riesgos
@@ -208,7 +219,6 @@
 
             <div id="introduccion" class="module-content active">
                 <h2 class="text-3xl font-bold mb-6 text-blue-700">Módulo 1: Fundamentos de Metodologías de Desarrollo</h2>
-                
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-600">¿Qué son las Metodologías de Desarrollo?</h3>
                     <p class="mb-4">Las metodologías de desarrollo de software son marcos de trabajo estructurados que se utilizan para planificar, diseñar, desarrollar, probar y mantener sistemas de software. Definen un conjunto de procesos, roles, responsabilidades, herramientas y técnicas para guiar el ciclo de vida del desarrollo.</p>
@@ -217,14 +227,12 @@
                         <strong>Analogía:</strong> Imagina que quieres construir una casa. No empezarías a poner ladrillos al azar, ¿verdad? Necesitas un plan (la metodología), saber quién hace qué (roles), qué materiales usar (herramientas) y en qué orden (procesos). Si es una cabaña pequeña o un rascacielos, necesitarás enfoques diferentes.
                     </div>
                 </div>
-
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-600">Metodologías Tradicionales (Prescriptivas)</h3>
                     <p class="mb-4">También conocidas como predictivas o en cascada, se caracterizan por una planificación detallada al inicio del proyecto y una ejecución secuencial de fases. Los cambios suelen ser costosos y difíciles de gestionar una vez que el proyecto está en marcha.</p>
                      <div class="example-box">
                         <strong>Analogía:</strong> Piensa en estas como recetas de cocina muy detalladas donde cada paso debe seguirse al pie de la letra y en orden. Si quieres cambiar un ingrediente principal a mitad de la cocción, puede ser un desastre o muy costoso.
                     </div>
-                    
                     <div class="accordion-item mb-2">
                         <div class="accordion-header">
                             <span class="font-medium">Modelo en Cascada (Waterfall)</span>
@@ -241,7 +249,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="accordion-item mb-2">
                         <div class="accordion-header">
                             <span class="font-medium">Modelo en V</span>
@@ -260,19 +267,19 @@
                     </div>
                      <p class="mt-4">Otros modelos tradicionales incluyen el <strong class="text-indigo-600">Modelo Iterativo</strong> (desarrollo en ciclos repetidos), <strong class="text-indigo-600">Modelo Incremental</strong> (entrega de partes funcionales del sistema progresivamente), <strong class="text-indigo-600">Modelo por Prototipos</strong> (creación de versiones tempranas para validar requisitos) y <strong class="text-indigo-600">Modelo en Espiral</strong> (combina iteración con gestión de riesgos).</p>
                 </div>
-
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-600">Introducción a las Metodologías Ágiles</h3>
                     <p class="mb-4">Las metodologías ágiles surgieron como respuesta a las limitaciones de los modelos tradicionales, especialmente en entornos con requisitos cambiantes o poco definidos. Se centran en la <strong class="text-teal-600">flexibilidad, la colaboración, la entrega continua de valor y la mejora constante</strong>.</p>
-                    <p>En lugar de una planificación exhaustiva al inicio, los proyectos ágiles se dividen en iteraciones cortas (sprints), donde se entrega software funcional y se obtiene retroalimentación frecuente del cliente.</p>
+                    <p class="mb-2">En lugar de una planificación exhaustiva al inicio, los proyectos ágiles se dividen en iteraciones cortas (sprints), donde se entrega software funcional y se obtiene retroalimentación frecuente del cliente.</p>
+                    <p class="mb-2">Las metodologías ágiles se empezaron a aplicar en la década de los 90 en el sector del software debido a la insatisfacción con los resultados de los modelos tradicionales.</p>
                      <div class="example-box">
                         <strong>Analogía Ágil:</strong> Si las tradicionales son recetas estrictas, las ágiles son más como ser un chef que prueba y ajusta los sabores sobre la marcha. Imagina desarrollar una app para pedir comida. En vez de planear todas las funciones (pagos, mapas, reseñas, etc.) durante meses, un equipo ágil podría enfocarse en la primera iteración (2 semanas) solo en "permitir al usuario ver restaurantes cercanos y sus menús". Al final de esas 2 semanas, muestran eso al cliente. Quizás el cliente dice: "¡Genial! Pero sería mejor si los menús tuvieran fotos". Esa opinión se usa para el siguiente "mini-proyecto".
                     </div>
                 </div>
-
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-600">Manifiesto Ágil</h3>
-                    <p class="mb-4">En 2001, un grupo de profesionales del software se reunió y creó el "Manifiesto por el Desarrollo Ágil de Software", que establece 4 valores fundamentales y 12 principios.</p>
+                    <p class="mb-2">En febrero de 2001, un grupo de diecisiete profesionales reconocidos del desarrollo de software se reunió en Utah (EEUU) con el objetivo de determinar los valores y principios que les permitirían a los equipos desarrollar software de forma más rápida y responder mejor a los cambios. De esta reunión nació la <strong class="text-indigo-600">Agile Alliance</strong> y el "Manifiesto por el Desarrollo Ágil de Software".</p>
+                    <p class="mb-4">El manifiesto establece 4 valores fundamentales y 12 principios, indicando que aunque se valora lo de la derecha, se valora más lo de la izquierda.</p>
                     
                     <h4 class="text-xl font-semibold mb-3 text-gray-700">Los 4 Valores del Manifiesto Ágil:</h4>
                      <p class="mb-3 text-sm text-gray-600">Estos valores indican qué se prioriza más (lo de la izquierda) sobre otras cosas también importantes (lo de la derecha).</p>
@@ -334,22 +341,22 @@
                 
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-blue-600">Framework Cynefin</h3>
-                    <p class="mb-4">El framework Cynefin (pronunciado ku-NEV-in) es un marco conceptual utilizado para ayudar en la toma de decisiones. Ayuda a identificar la naturaleza de un problema para poder abordarlo de la manera más adecuada. Se divide en cinco dominios:</p>
+                    <p class="mb-2">El framework Cynefin (pronunciado ku-NEV-in, palabra galesa que significa hábitat o lugar familiar) es un marco conceptual que ayuda a tomar decisiones al identificar la naturaleza de un problema. Se basa en la adaptabilidad, auto-organización y retroalimentación continua.</p>
+                    <p class="mb-4">Clasifica las situaciones en cinco dominios:</p>
                     <ul class="list-disc list-inside space-y-2 ml-4">
-                        <li><strong class="text-green-700">Simple (u Obvio):</strong> Causa y efecto son evidentes. Se aplica las "mejores prácticas". <span class="italic text-gray-600">(Detectar -> Clasificar -> Responder)</span></li>
-                        <li><strong class="text-yellow-700">Complicado:</strong> Causa y efecto requieren análisis o experiencia. Se aplican "buenas prácticas". <span class="italic text-gray-600">(Detectar -> Analizar -> Responder)</span></li>
-                        <li><strong class="text-orange-700">Complejo:</strong> Causa y efecto solo se pueden deducir en retrospectiva. Se requiere experimentación. Prácticas emergentes. <span class="italic text-gray-600">(Experimentar -> Detectar -> Responder)</span>. Aquí es donde las metodologías ágiles como Scrum brillan.</li>
-                        <li><strong class="text-red-700">Caótico:</strong> No hay relación clara entre causa y efecto. Se necesita actuar rápidamente para establecer orden. Prácticas novedosas. <span class="italic text-gray-600">(Actuar -> Detectar -> Responder)</span></li>
-                        <li><strong class="text-gray-700">Desorden:</strong> Cuando no se sabe en qué dominio se está. El objetivo es salir de aquí lo antes posible.</li>
+                        <li><strong class="text-green-700">Simple (u Obvio):</strong> La relación causa-efecto es clara para todos. Se aplican las "mejores prácticas" (soluciones conocidas). El enfoque es: <span class="italic text-gray-600">Detectar -> Clasificar -> Responder</span>. Scrum puede funcionar, pero procesos más definidos pueden ser más eficientes.</li>
+                        <li><strong class="text-yellow-700">Complicado:</strong> La relación causa-efecto requiere análisis o experiencia; puede haber múltiples soluciones correctas. Se aplican "buenas prácticas" y se necesita el involucramiento de expertos. El enfoque es: <span class="italic text-gray-600">Detectar -> Analizar -> Responder</span>. Scrum podría usarse, pero equipos de expertos analizando y planteando soluciones basadas en buenas prácticas pueden ser más eficientes. (Ej: Mantenimiento de sistemas, soporte técnico).</li>
+                        <li><strong class="text-orange-700">Complejo:</strong> La relación causa-efecto solo se puede deducir en retrospectiva. Los resultados son impredecibles; se requiere experimentación. Es el dominio de las "prácticas emergentes". El enfoque es: <span class="italic text-gray-600">Experimentar -> Detectar -> Responder</span>. Aquí es donde las metodologías ágiles como Scrum son más efectivas. (Ej: Desarrollo de nuevos productos, innovación).</li>
+                        <li><strong class="text-red-700">Caótico:</strong> No hay relación clara entre causa y efecto. Se está en crisis y se necesita actuar rápidamente para establecer orden. Es el dominio de la improvisación y "prácticas novedosas". El enfoque es: <span class="italic text-gray-600">Actuar -> Detectar -> Responder</span>. No es un escenario para Scrum; alguien debe tomar el control.</li>
+                        <li><strong class="text-gray-700">Desorden (o Confusión):</strong> Cuando no se sabe en qué dominio se está. Es una zona peligrosa; el objetivo es salir de aquí lo antes posible, clasificando la situación para luego actuar según el dominio correspondiente.</li>
                     </ul>
-                    <p class="mt-4">Entender en qué dominio se encuentra un proyecto o problema ayuda a elegir la metodología o enfoque más adecuado. Muchos proyectos de software residen en el dominio Complejo debido a la incertidumbre en los requisitos, la tecnología y las interacciones humanas.</p>
-                    <div class="example-box">
-                        <strong>Ejemplo Cynefin:</strong>
+                     <div class="example-box">
+                        <strong>Ejemplo Cynefin en Software:</strong>
                         <ul>
-                            <li><strong>Simple:</strong> Un usuario olvidó su contraseña. La solución es clara: seguir el procedimiento de reseteo.</li>
-                            <li><strong>Complicado:</strong> Un sistema de facturación calcula mal los impuestos para ciertos clientes. Varios expertos (contables, programadores) analizan las reglas fiscales y el código para encontrar el error.</li>
-                            <li><strong>Complejo:</strong> Lanzar una nueva red social. No se sabe qué funciones amarán los usuarios. El equipo lanza una versión básica (MVP), observa cómo la usan, y adapta la red social basándose en el feedback y los datos.</li>
-                             <li><strong>Caótico:</strong> Un ciberataque masivo está tumbando los servidores de la empresa. El equipo de IT actúa inmediatamente para aislar sistemas y restaurar servicios, sin un plan detallado previo, solo para controlar la crisis.</li>
+                            <li><strong>Simple:</strong> Un usuario reporta un error tipográfico en una etiqueta de la web. La solución es corregir el texto.</li>
+                            <li><strong>Complicado:</strong> El rendimiento de una base de datos se ha degradado. Un DBA experto analiza los índices, consultas y configuración para optimizarla.</li>
+                            <li><strong>Complejo:</strong> Se quiere desarrollar una nueva función para una red social que aumente la interacción de los usuarios. El equipo Scrum construye una versión pequeña de la función, la lanza a un grupo de usuarios, mide su impacto y adapta la función basándose en el feedback.</li>
+                             <li><strong>Caótico:</strong> Un fallo crítico en el sistema de producción impide que los usuarios accedan a la aplicación. El equipo de operaciones actúa inmediatamente para restaurar el servicio, aplicando soluciones rápidas y estabilizando el sistema.</li>
                         </ul>
                     </div>
                 </div>
@@ -408,7 +415,7 @@
             </div>
 
             <div id="scrum" class="module-content">
-                <h2 class="text-3xl font-bold mb-6 text-green-700">Módulo 2: Scrum - El Marco Ágil Popular</h2>
+                 <h2 class="text-3xl font-bold mb-6 text-green-700">Módulo 2: Scrum - El Marco Ágil Popular</h2>
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-green-600">¿Qué es Scrum?</h3>
                     <p class="mb-2">Scrum es un marco de trabajo (framework) ágil, ligero y fácil de entender, aunque extremadamente difícil de dominar. Se utiliza para desarrollar, entregar y mantener productos complejos, especialmente en entornos con alta incertidumbre.</p>
@@ -721,14 +728,32 @@
                                 <li>Los elementos de mayor prioridad suelen estar más detallados.</li>
                                 <li>El <strong class="text-indigo-600">Objetivo del Producto (Product Goal)</strong> describe un estado futuro del producto y es el objetivo a largo plazo para el Equipo Scrum. El Product Backlog se utiliza para definir "qué" construirá el Equipo Scrum para alcanzar el Product Goal.</li>
                             </ul>
+                            <div class="sub-card">
+                                <h4 class="font-semibold text-md mb-2 text-green-700">Priorización del Product Backlog</h4>
+                                <p class="text-sm mb-2">El Product Owner prioriza los PBIs para maximizar el valor. Algunas técnicas y consideraciones incluyen:</p>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-xs">
+                                    <li><strong>Valor de Negocio:</strong> Relevancia para cumplir el objetivo del producto.</li>
+                                    <li><strong>Retorno de la Inversión (ROI):</strong> Beneficio económico vs. costo de construcción (ROI = Valor / Costo).</li>
+                                    <li><strong>Riesgo:</strong> Construir primero características de alto riesgo y alta importancia. Evitar las de bajo importancia y alto riesgo.</li>
+                                    <li><strong>MoSCoW:</strong>
+                                        <ul class="list-circle list-inside ml-4">
+                                            <li><strong>M</strong>ust have (Debe tener): Esencial, no negociable (<80% del esfuerzo).</li>
+                                            <li><strong>S</strong>hould have (Debería tener): Importante, no vital, pero da mucho valor (<=20%).</li>
+                                            <li><strong>C</strong>ould have (Podría tener): Deseable, poco impacto si no está (<=10%).</li>
+                                            <li><strong>W</strong>on't have (No tendrá): No se hará en esta ocasión.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Diagrama de Pareto (80/20):</strong> Enfocarse en el 20% de las características que probablemente proporcionen el 80% del valor.</li>
+                                </ul>
+                            </div>
                             <div class="example-box">
                                 <strong>Analogía Product Backlog:</strong> Es la <strong class="text-sky-700">lista de deseos del cliente o la lista de todas las jugadas posibles</strong> que el equipo podría realizar durante la temporada, ordenada por importancia.
                                 <br><strong>Ejemplo de Product Backlog (para la app de recetas):</strong>
                                 <ol class="list-decimal list-inside text-sm">
-                                    <li>Como usuario, quiero registrarme con mi email. (Prioridad Alta, Estimación: 3 puntos)</li>
-                                    <li>Como usuario, quiero buscar recetas por nombre. (Prioridad Alta, Estimación: 5 puntos)</li>
-                                    <li>Como usuario, quiero ver videos de preparación de recetas. (Prioridad Media, Estimación: 8 puntos)</li>
-                                    <li>Como usuario, quiero compartir recetas en redes sociales. (Prioridad Baja, Estimación: 2 puntos)</li>
+                                    <li>Como usuario, quiero registrarme con mi email. (Prioridad Alta, Estimación: 3 puntos, MoSCoW: MUST)</li>
+                                    <li>Como usuario, quiero buscar recetas por nombre. (Prioridad Alta, Estimación: 5 puntos, MoSCoW: MUST)</li>
+                                    <li>Como usuario, quiero ver videos de preparación de recetas. (Prioridad Media, Estimación: 8 puntos, MoSCoW: SHOULD)</li>
+                                    <li>Como usuario, quiero compartir recetas en redes sociales. (Prioridad Baja, Estimación: 2 puntos, MoSCoW: COULD)</li>
                                 </ol>
                             </div>
                         </div>
@@ -746,6 +771,7 @@
                                 <li>Emerge a lo largo del Sprint a medida que se aprende más.</li>
                                 <li>Solo el Equipo de Desarrollo (Desarrolladores) puede cambiarlo durante un Sprint.</li>
                                 <li>Se utiliza para seguir el progreso del Sprint (ej. mediante un tablero de tareas o un burndown chart).</li>
+                                <li>Debe incluir al menos una mejora de proceso identificada en la Retrospectiva anterior.</li>
                             </ul>
                              <p class="mt-2 text-sm">El <strong class="text-indigo-600">Objetivo del Sprint (Sprint Goal)</strong> es el único objetivo para el Sprint. Aunque el Sprint Backlog es flexible, el Sprint Goal es un compromiso del Equipo de Desarrollo.</p>
                              <div class="example-box">
@@ -766,6 +792,7 @@
                                             <li>Tarea (Luis): Desarrollar API para obtener recetas favoritas del usuario. (Estimado: 8 horas)</li>
                                         </ul>
                                     </li>
+                                    <li><strong>Mejora de Proceso:</strong> Investigar nueva herramienta de testing automatizado (2 horas).</li>
                                 </ul>
                             </div>
                         </div>
@@ -791,36 +818,72 @@
                     </div>
                 </div>
                  <div class="card">
-                     <h3 class="text-2xl font-semibold mb-4 text-green-600">Definición de "Terminado" (Definition of "Done" - DoD)</h3>
-                     <p class="mb-3">Es un <strong class="text-green-700">entendimiento formal y compartido</strong> dentro del Equipo Scrum sobre qué significa que el trabajo esté realmente completo y con la calidad esperada. Es una lista de criterios que deben cumplirse para que un elemento del Product Backlog o un Incremento se considere "Terminado".</p>
-                     <p class="mb-2">Asegura la transparencia y que todos tengan la misma expectativa sobre la calidad del Incremento. Si un elemento no cumple la DoD, no puede ser liberado ni presentado en la Sprint Review.</p>
-                     <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
-                        <li>Si la DoD para un Incremento es parte de los estándares de la organización, todos los Equipos Scrum deben seguirla como mínimo.</li>
-                        <li>Si no es un estándar organizacional, el Equipo Scrum debe crear una DoD apropiada para el producto.</li>
-                        <li>Si múltiples Equipos Scrum trabajan en el mismo producto, deben definir y cumplir mutuamente la misma DoD.</li>
-                        <li>La DoD puede evolucionar y volverse más rigurosa a medida que el equipo madura, a través de las Retrospectivas.</li>
-                     </ul>
-                     <p class="mt-2 text-sm">La DoD guía al Equipo de Desarrollo en saber cuántos elementos del Product Backlog puede seleccionar durante el Sprint Planning. El propósito de cada Sprint es entregar Incrementos de funcionalidad que se ajustan a la DoD.</p>
-                     <div class="example-box">
-                        <strong>Analogía DoD:</strong> Es como la <strong class="text-sky-700">lista de verificación de calidad antes de que un coche salga de la fábrica</strong>: frenos probados, luces funcionando, pintura sin defectos, etc. Si no pasa todos los checks, no está "Terminado".
-                        <br><strong>Ejemplo de Definición de "Terminado" (para una historia de usuario de software):</strong>
-                        <ul class="list-disc list-inside text-sm">
-                            <li>El código está escrito y cumple con los estándares de codificación del equipo.</li>
-                            <li>Las pruebas unitarias automatizadas cubren al menos el 85% del código nuevo y todas pasan.</li>
-                            <li>El código ha sido revisado por al menos otro Desarrollador (peer review) y los comentarios han sido atendidos.</li>
-                            <li>La funcionalidad ha sido probada manualmente en los navegadores principales (Chrome, Firefox, Safari).</li>
-                            <li>No hay errores críticos o mayores conocidos relacionados con la historia.</li>
-                            <li>La documentación para el usuario (si es necesaria) está actualizada.</li>
-                            <li>El Product Owner ha validado que la funcionalidad cumple los criterios de aceptación de la historia.</li>
-                        </ul>
-                        <p class="text-xs mt-1">Si una historia de usuario cumple todos estos puntos, entonces el equipo la considera "Terminada" y puede ser parte del Incremento.
-                        </p>
+                     <h3 class="text-2xl font-semibold mb-4 text-green-600">Definición de "Terminado" (Definition of "Done" - DoD) y "Listo" (Definition of "Ready" - DoR)</h3>
+                    <div class="accordion-item mb-2">
+                        <div class="accordion-header">
+                            <span class="font-medium text-lg">Definición de "Terminado" (DoD)</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
+                        </div>
+                        <div class="accordion-content bg-white">
+                             <p class="mb-3">Es un <strong class="text-green-700">entendimiento formal y compartido</strong> dentro del Equipo Scrum sobre qué significa que el trabajo esté realmente completo y con la calidad esperada. Es una lista de criterios que deben cumplirse para que un elemento del Product Backlog o un Incremento se considere "Terminado".</p>
+                             <p class="mb-2">Asegura la transparencia y que todos tengan la misma expectativa sobre la calidad del Incremento. Si un elemento no cumple la DoD, no puede ser liberado ni presentado en la Sprint Review.</p>
+                             <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
+                                <li>Si la DoD para un Incremento es parte de los estándares de la organización, todos los Equipos Scrum deben seguirla como mínimo.</li>
+                                <li>Si no es un estándar organizacional, el Equipo Scrum debe crear una DoD apropiada para el producto.</li>
+                                <li>Si múltiples Equipos Scrum trabajan en el mismo producto, deben definir y cumplir mutuamente la misma DoD.</li>
+                                <li>La DoD puede evolucionar y volverse más rigurosa a medida que el equipo madura, a través de las Retrospectivas (nunca en medio de un Sprint).</li>
+                             </ul>
+                             <p class="mt-2 text-sm">La DoD guía al Equipo de Desarrollo en saber cuántos elementos del Product Backlog puede seleccionar durante el Sprint Planning. El propósito de cada Sprint es entregar Incrementos de funcionalidad que se ajustan a la DoD.</p>
+                             <div class="example-box">
+                                <strong>Analogía DoD:</strong> Es como la <strong class="text-sky-700">lista de verificación de calidad antes de que un coche salga de la fábrica</strong>: frenos probados, luces funcionando, pintura sin defectos, etc. Si no pasa todos los checks, no está "Terminado".
+                                <br><strong>Ejemplo de Definición de "Terminado" (para una historia de usuario de software):</strong>
+                                <ul class="list-disc list-inside text-sm">
+                                    <li>El código está escrito y cumple con los estándares de codificación del equipo.</li>
+                                    <li>Las pruebas unitarias automatizadas cubren al menos el 85% del código nuevo y todas pasan.</li>
+                                    <li>El código ha sido revisado por al menos otro Desarrollador (peer review) y los comentarios han sido atendidos.</li>
+                                    <li>La funcionalidad ha sido probada manualmente en los navegadores principales (Chrome, Firefox, Safari).</li>
+                                    <li>No hay errores críticos o mayores conocidos relacionados con la historia.</li>
+                                    <li>La documentación para el usuario (si es necesaria) está actualizada.</li>
+                                    <li>El Product Owner ha validado que la funcionalidad cumple los criterios de aceptación de la historia.</li>
+                                </ul>
+                                <p class="text-xs mt-1">Si una historia de usuario cumple todos estos puntos, entonces el equipo la considera "Terminada" y puede ser parte del Incremento.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <div class="accordion-header">
+                            <span class="font-medium text-lg">Definición de "Listo" (DoR)</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
+                        </div>
+                        <div class="accordion-content bg-white">
+                            <p class="mb-2">La Definición de "Listo" (Definition of Ready) es un conjunto de criterios que un elemento del Product Backlog (como una historia de usuario) debe cumplir <strong class="text-green-700">antes de que pueda ser seleccionado para un Sprint</strong> en la Sprint Planning Meeting. Ayuda a asegurar que el equipo tenga suficiente información y claridad para comenzar a trabajar en un elemento sin mayores impedimentos.</p>
+                            <p class="mb-2"><strong>Consecuencias de no tener un DoR o no cumplirlo:</strong></p>
+                            <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
+                                <li>Tiempo perdido durante el Sprint tratando de entender requisitos básicos.</li>
+                                <li>Desorientación en el equipo al abordar tareas poco claras.</li>
+                                <li>Riesgo de no poder terminar el trabajo comprometido en el Sprint.</li>
+                                <li>Desconfianza del cliente si el valor incremental se ve comprometido.</li>
+                            </ul>
+                             <div class="example-box">
+                                <strong>Ejemplo de Definición de "Listo" (para una historia de usuario):</strong>
+                                <ul class="list-disc list-inside text-sm">
+                                    <li>La historia de usuario está escrita en el formato "Como [rol], quiero [acción], para [beneficio]".</li>
+                                    <li>Los criterios de aceptación están definidos y son claros.</li>
+                                    <li>La historia ha sido estimada por el Equipo de Desarrollo (ej. en puntos de historia).</li>
+                                    <li>Cualquier dependencia externa (ej. de otro equipo, de un API) está resuelta o claramente identificada y gestionada.</li>
+                                    <li>El Product Owner ha confirmado que la historia sigue siendo de alta prioridad.</li>
+                                    <li>El equipo entiende suficientemente la historia como para empezar a trabajar.</li>
+                                </ul>
+                                <p class="text-xs mt-1">Si una historia cumple estos criterios, está "Lista" para ser considerada en el Sprint Planning.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div id="kanban" class="module-content">
-                <h2 class="text-3xl font-bold mb-6 text-purple-700">Módulo 3: Kanban - Visualizando el Flujo</h2>
+                 <h2 class="text-3xl font-bold mb-6 text-purple-700">Módulo 3: Kanban - Visualizando el Flujo</h2>
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-purple-600">¿Qué es Kanban?</h3>
                     <p class="mb-2">Kanban es un método para gestionar el flujo de trabajo, optimizando la entrega de valor al cliente. Su nombre proviene del japonés y significa "tarjeta visual" o "señal visual". Nació en el <strong class="text-indigo-600">Sistema de Producción de Toyota (TPS)</strong> a finales de los años 40, como parte del sistema "Just In Time" (Justo a Tiempo).</p>
@@ -927,7 +990,7 @@
             </div>
 
             <div id="historias_estimacion" class="module-content">
-                <h2 class="text-3xl font-bold mb-6 text-indigo-700">Módulo 4: Historias de Usuario y Planificación Ágil</h2>
+                <h2 class="text-3xl font-bold mb-6 text-indigo-700">Módulo 4: Historias de Usuario y Estimación Ágil</h2>
                 <div class="card">
                     <h3 class="text-2xl font-semibold mb-4 text-indigo-600">Historias de Usuario (User Stories)</h3>
                     <p class="mb-2">Las Historias de Usuario son descripciones cortas y simples de una funcionalidad contada desde la perspectiva de la persona que desea la nueva capacidad, usualmente un usuario o cliente del sistema. Son una forma de expresar requisitos en un lenguaje comprensible para todos y fomentar la conversación.</p>
@@ -1002,13 +1065,13 @@
                     </div>
                      <div class="accordion-item mb-2">
                         <div class="accordion-header bg-indigo-100 hover:bg-indigo-200">
-                            <span class="font-medium text-indigo-700">Puntos de Historia (Story Points)</span>
+                            <span class="font-medium text-indigo-700">Escalas de Estimación (Puntos de Historia y T-Shirt Sizes)</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="text-sm mb-2">Son una unidad de medida abstracta utilizada por los equipos ágiles para estimar el esfuerzo relativo necesario para implementar una historia de usuario. Consideran la complejidad, la cantidad de trabajo, la incertidumbre y el riesgo.</p>
-                            <p class="text-sm mb-2">No se traducen directamente a horas. Una historia de 2 puntos no necesariamente toma el doble de tiempo que una de 1 punto, pero sí representa aproximadamente el doble de esfuerzo/complejidad.</p>
-                            <p class="text-sm">Se suele usar una escala basada en la <strong class="text-blue-600">secuencia de Fibonacci</strong> (0, 1, 2, 3, 5, 8, 13, 21, 40, 100) para reflejar la creciente incertidumbre en estimaciones más grandes.</p>
+                            <p class="text-sm mb-2"><strong class="text-blue-600">Puntos de Historia (Story Points):</strong> Son una unidad de medida abstracta utilizada por los equipos ágiles para estimar el esfuerzo relativo necesario para implementar una historia de usuario. Consideran la complejidad, la cantidad de trabajo, la incertidumbre y el riesgo. No se traducen directamente a horas. Se suele usar una escala basada en la secuencia de Fibonacci (0, 1, 2, 3, 5, 8, 13, 21, 40, 100) para reflejar la creciente incertidumbre en estimaciones más grandes.</p>
+                            <p class="text-sm mb-2"><strong class="text-blue-600">T-Shirt Sizes (Tallas de Camiseta):</strong> Para estimaciones de muy alto nivel (Epics o bloques funcionales grandes), se pueden usar tallas como XS, S, M, L, XL. Es una forma rápida de tener una idea general del tamaño relativo antes de descomponer en historias más pequeñas.</p>
+                            <p class="text-sm">Las tareas dentro de un Sprint a veces se estiman en <strong class="text-blue-600">horas ideales</strong>, preferiblemente menos de un día por tarea.</p>
                             <div class="example-box text-xs">
                                 <strong>Ejemplo Story Points:</strong> Un equipo decide que "Cambiar el color de un botón" es 1 punto (muy simple). Luego, "Añadir un campo nuevo a un formulario" podría ser 2 puntos (un poco más de trabajo). "Implementar un sistema de login con email y contraseña" podría ser 5 puntos (más complejo, más pruebas, etc.). "Integrar con un sistema de pagos externo" podría ser 13 puntos (mucha incertidumbre y complejidad).
                             </div>
@@ -1016,11 +1079,12 @@
                     </div>
                     <div class="accordion-item mb-2">
                         <div class="accordion-header bg-indigo-100 hover:bg-indigo-200">
-                            <span class="font-medium text-indigo-700">Planning Poker</span>
+                            <span class="font-medium text-indigo-700">Método Delphi y Planning Poker</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="text-sm mb-2">Es una técnica de estimación basada en el consenso, popularizada por Mike Cohn, que utiliza puntos de historia. Se basa en el método Wideband Delphi.</p>
+                             <p class="text-sm mb-2"><strong class="text-blue-600">Método Delphi:</strong> Técnica para lograr consenso entre expertos mediante rondas de estimaciones anónimas y retroalimentación controlada.</p>
+                            <p class="text-sm mb-2"><strong class="text-blue-600">Planning Poker:</strong> Es una técnica de estimación basada en el consenso, popularizada por Mike Cohn, que utiliza puntos de historia y se basa en el método Wideband Delphi.</p>
                             <ol class="list-decimal list-inside text-sm space-y-1">
                                 <li>El Product Owner presenta una historia de usuario.</li>
                                 <li>Los miembros del equipo discuten la historia y hacen preguntas.</li>
@@ -1043,50 +1107,179 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <h3 class="text-2xl font-semibold mb-4 text-indigo-600">Planificación de Releases y Sprints</h3>
                      <div class="accordion-item mb-2">
                         <div class="accordion-header bg-indigo-100 hover:bg-indigo-200">
-                            <span class="font-medium text-indigo-700">Minimum Marketable Feature (MMF)</span>
+                            <span class="font-medium text-indigo-700">Sabiduría de las Multitudes</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="text-sm">Es el conjunto más pequeño posible de funcionalidad que, por sí misma, tiene valor en el mercado o para el usuario y puede ser lanzada. Ayuda a definir el alcance de las primeras entregas para obtener feedback temprano y generar valor rápidamente.</p>
+                            <p class="text-sm mb-2">Principio que sugiere que las decisiones tomadas colectivamente por un grupo diverso e independiente de personas suelen ser más acertadas que las de un solo experto. Planning Poker se basa en este principio.</p>
+                            <p class="text-sm">Condiciones para que funcione: diversidad de opiniones, independencia de los participantes y un mecanismo de agregación de opiniones.</p>
                         </div>
                     </div>
-                    <div class="accordion-item mb-2">
-                        <div class="accordion-header bg-indigo-100 hover:bg-indigo-200">
-                            <span class="font-medium text-indigo-700">Release Plan (Plan de Liberación)</span>
+                </div>
+            </div>
+
+            <div id="planificacion_agil" class="module-content">
+                <h2 class="text-3xl font-bold mb-6 text-cyan-700">Módulo 5: Planificación Ágil Avanzada</h2>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4 text-cyan-600">Entrega Iterativa e Incremental</h3>
+                    <p class="mb-2">En Agile, el producto se desarrolla por <strong class="text-teal-600">incrementos</strong> (pequeñas porciones funcionales) en ciclos repetidos llamados <strong class="text-teal-600">iteraciones</strong> (Sprints en Scrum). Cada iteración produce una versión funcional del producto, permitiendo obtener feedback continuo del usuario.</p>
+                    <p class="mb-2"><strong class="text-indigo-600">Desarrollo Iterativo:</strong> Se construyen gradualmente las características, pero no se espera a que cada una esté 100% completa antes de lanzarla o mostrarla. Se refina en ciclos.</p>
+                    <p class="mb-2"><strong class="text-indigo-600">Desarrollo Incremental:</strong> Se divide el producto en segmentos funcionales completos que se entregan uno tras otro, añadiendo valor progresivamente.</p>
+                    <div class="example-box">
+                        <strong>Analogía "Pintar la Mona Lisa":</strong>
+                        <ul>
+                            <li><strong>No Ágil (Cascada):</strong> Primero se pinta todo el fondo, luego toda la ropa, luego toda la cara, y solo al final se ve el cuadro completo. Si al cliente no le gusta la sonrisa, hay que rehacer mucho.</li>
+                            <li><strong>Iterativo (solo):</strong> Se hace un boceto general, luego se añaden algunos colores base, luego se refinan los detalles de la cara, luego los de la ropa, etc. En cada paso se mejora todo un poco.</li>
+                            <li><strong>Incremental (solo):</strong> Se pinta perfectamente la esquina superior izquierda, luego la siguiente sección, etc. Cada sección está terminada, pero no se tiene una visión del todo hasta el final.</li>
+                            <li><strong>Iterativo e Incremental (Ágil):</strong> Se empieza con un boceto simple pero completo (MVP del cuadro). En la siguiente iteración, se mejora el rostro y se añade un poco de color al fondo. En la siguiente, se detallan las manos y se mejora el color del vestido. Cada iteración entrega un cuadro "mejor" y más completo, y el cliente puede dar feedback en cada paso.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4 text-cyan-600">MVP y MMF</h3>
+                     <div class="accordion-item mb-2">
+                        <div class="accordion-header bg-cyan-100 hover:bg-cyan-200">
+                            <span class="font-medium text-cyan-700">Minimum Viable Product (MVP - Producto Mínimo Viable)</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="text-sm mb-2">Es un plan de alto nivel que indica qué funcionalidades se entregarán en qué releases (conjuntos de Sprints). Se define en función de las prioridades del Product Owner, la duración de los Sprints y la <strong class="text-blue-600">velocidad del equipo</strong> (cantidad de trabajo que el equipo puede completar en un Sprint, medida en puntos de historia).</p>
-                            <p class="text-sm">El Release Plan no es fijo y se actualiza a medida que se aprende más.</p>
+                            <p class="text-sm mb-2">Es la versión de un nuevo producto que permite a un equipo recolectar la <strong class="text-blue-600">máxima cantidad de aprendizaje validado</strong> sobre los clientes con el <strong class="text-blue-600">menor esfuerzo</strong>. No se trata de un producto "malo" o incompleto, sino de la forma más rápida de empezar el ciclo de aprendizaje Construir-Medir-Aprender (Lean Startup).</p>
+                            <p class="text-sm">Permite: evitar crear productos que nadie necesita, maximizar el aprendizaje por dólar invertido, y determinar si el producto es viable.</p>
                             <div class="example-box text-xs">
-                                <strong>Ejemplo de Velocidad y Release Plan:</strong>
-                                <p>Un equipo ha completado 3 Sprints:</p>
-                                <ul>
-                                    <li>Sprint 1: Completaron 18 puntos de historia.</li>
-                                    <li>Sprint 2: Completaron 22 puntos de historia.</li>
-                                    <li>Sprint 3: Completaron 20 puntos de historia.</li>
-                                </ul>
-                                <p>Su velocidad promedio es (18+22+20)/3 = 20 puntos por Sprint.</p>
-                                <p>El Product Owner quiere lanzar una primera versión (Release 1) que incluye funcionalidades que suman un total de 100 puntos de historia del Product Backlog.</p>
-                                <p>Basándose en la velocidad, se podría estimar que Release 1 tomará aproximadamente 100 puntos / 20 puntos/Sprint = 5 Sprints.</p>
-                                <p>Si cada Sprint dura 2 semanas, Release 1 podría estar lista en unas 10 semanas. Esto es una proyección, no una garantía, y se revisará continuamente.</p>
+                                <strong>Ejemplo MVP:</strong> Dropbox, en sus inicios, no construyó todo el sistema de almacenamiento en la nube. Su MVP fue un simple video que demostraba cómo funcionaría el producto. Esto les permitió validar el interés del mercado antes de invertir masivamente en desarrollo. Otro ejemplo: para un servicio de "paseo de perros", el MVP podría ser una simple página web con un número de teléfono y un anuncio local, en lugar de una app completa con geolocalización y pagos.
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item mb-2">
-                        <div class="accordion-header bg-indigo-100 hover:bg-indigo-200">
-                            <span class="font-medium text-indigo-700">Sprint 0</span>
+                     <div class="accordion-item mb-2">
+                        <div class="accordion-header bg-cyan-100 hover:bg-cyan-200">
+                            <span class="font-medium text-cyan-700">Minimum Marketable Feature (MMF - Característica Mínima Comercializable)</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
                         </div>
                         <div class="accordion-content bg-white">
-                            <p class="text-sm">Es un concepto utilizado por algunos equipos para referirse a un período inicial (antes del primer Sprint de desarrollo) donde se realizan tareas de preparación: configuración de entornos de desarrollo y pruebas, diseño de arquitectura inicial a alto nivel, creación del Product Backlog inicial con algunas historias ya refinadas, definición de la DoD inicial, etc. No es un evento oficial de Scrum, pero es una práctica común para sentar las bases del proyecto.</p>
+                            <p class="text-sm">Es el conjunto más pequeño de funcionalidad que, por sí misma, tiene <strong class="text-blue-600">valor en el mercado</strong> y puede ser entregada a los clientes. A diferencia del MVP (enfocado en aprendizaje), el MMF está enfocado en entregar valor real y tangible que los clientes usarían y por el que podrían pagar.</p>
+                             <div class="example-box text-xs">
+                                <strong>Ejemplo MMF:</strong> Para una app de edición de fotos, un MMF podría ser la capacidad de aplicar un solo filtro popular y guardar la foto. Aunque la visión a largo plazo incluya docenas de filtros, herramientas de recorte, etc., este MMF ya ofrece valor al usuario.
+                            </div>
                         </div>
                     </div>
+                </div>
+
+                 <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4 text-cyan-600">User Story Mapping</h3>
+                    <p class="mb-2">Es una técnica visual y colaborativa, popularizada por Jeff Patton, que ayuda a los equipos a entender el <strong class="text-teal-600">viaje completo del usuario</strong> (user journey) y a organizar las historias de usuario de una manera que tenga sentido para la planificación y las entregas.</p>
+                    <p class="mb-2">Se estructura generalmente en una jerarquía:</p>
+                    <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
+                        <li><strong class="text-indigo-600">Actividades (o Épicas/Temas):</strong> Tareas de alto nivel que los usuarios quieren completar (ej: "Gestionar mi cuenta", "Buscar productos").</li>
+                        <li><strong class="text-indigo-600">Pasos (o Features/Funcionalidades):</strong> Subtareas específicas dentro de una actividad (ej: dentro de "Gestionar mi cuenta", los pasos podrían ser "Iniciar sesión", "Actualizar perfil", "Cambiar contraseña").</li>
+                        <li><strong class="text-indigo-600">Detalles (o Historias de Usuario):</strong> Interacciones granulares para completar un paso (ej: para "Iniciar sesión", las historias podrían ser "Como usuario, quiero ingresar mi email y contraseña", "Como usuario, quiero recuperar mi contraseña si la olvido").</li>
+                    </ul>
+                    <p class="mt-2 text-sm">El mapa se organiza horizontalmente siguiendo el flujo narrativo del usuario, y verticalmente por prioridad o para agrupar alternativas o detalles. Ayuda a identificar el MVP/MMF y a planificar releases cortando "rebanadas" horizontales del mapa.</p>
+                    <div class="example-box">
+                        <strong>Ejemplo User Story Map (muy simplificado para "Pedir un Café"):</strong>
+                        <table class="w-full text-xs my-2">
+                            <thead>
+                                <tr class="bg-sky-200">
+                                    <th class="border p-1">Actividad Principal (Backbone)</th>
+                                    <th class="border p-1">Elegir Bebida</th>
+                                    <th class="border p-1">Personalizar Bebida</th>
+                                    <th class="border p-1">Pagar</th>
+                                    <th class="border p-1">Recibir Bebida</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border p-1 font-semibold">Release 1 (MVP)</td>
+                                    <td class="border p-1">[HU: Ver lista de cafés disponibles]</td>
+                                    <td class="border p-1">[HU: Elegir tamaño (pequeño/grande)]</td>
+                                    <td class="border p-1">[HU: Pagar en efectivo]</td>
+                                    <td class="border p-1">[HU: Recoger en mostrador]</td>
+                                </tr>
+                                <tr>
+                                    <td class="border p-1 font-semibold">Release 2</td>
+                                    <td class="border p-1">[HU: Ver tés e infusiones]</td>
+                                    <td class="border p-1">[HU: Elegir tipo de leche (entera/descremada)]</td>
+                                    <td class="border p-1">[HU: Pagar con tarjeta]</td>
+                                    <td class="border p-1"> </td>
+                                </tr>
+                                 <tr>
+                                    <td class="border p-1 font-semibold">Release 3</td>
+                                    <td class="border p-1"> </td>
+                                    <td class="border p-1">[HU: Añadir siropes (vainilla/caramelo)]</td>
+                                    <td class="border p-1">[HU: Pagar con app móvil]</td>
+                                    <td class="border p-1">[HU: Entrega a domicilio]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs">La "columna vertebral" son las actividades principales. Debajo, las historias de usuario se ordenan por prioridad para cada release.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4 text-cyan-600">Impact Mapping</h3>
+                    <p class="mb-2">Es una técnica de planificación estratégica visual y colaborativa creada por Gojko Adzic. Ayuda a los equipos a alinear las entregas de software con los objetivos de negocio, enfocándose en los <strong class="text-teal-600">impactos</strong> deseados.</p>
+                    <p class="mb-2">Se estructura respondiendo cuatro preguntas clave:</p>
+                    <ol class="list-decimal list-inside ml-4 space-y-1 text-sm">
+                        <li><strong class="text-indigo-600">¿Por qué? (Goal/Objetivo):</strong> ¿Por qué estamos haciendo esto? ¿Cuál es el objetivo de negocio que queremos lograr? (Ej: "Aumentar la retención de clientes en un 15% en 6 meses").</li>
+                        <li><strong class="text-indigo-600">¿Quién? (Actors/Actores):</strong> ¿Quiénes son las personas o grupos cuyo comportamiento necesitamos cambiar para alcanzar el objetivo? ¿Quiénes pueden ayudarnos o impedirlo? (Ej: "Clientes existentes", "Equipo de soporte").</li>
+                        <li><strong class="text-indigo-600">¿Cómo? (Impacts/Impactos):</strong> ¿Cómo queremos que cambie el comportamiento de estos actores? ¿Qué harían diferente? Estos son los impactos deseados. (Ej: Para "Clientes existentes", un impacto podría ser "Que usen la app más frecuentemente" o "Que recomienden la app a amigos").</li>
+                        <li><strong class="text-indigo-600">¿Qué? (Deliverables/Entregables):</strong> ¿Qué podemos construir (features, software, actividades) para generar esos cambios de comportamiento (impactos) y así alcanzar el objetivo? (Ej: Para el impacto "Que usen la app más frecuentemente", un entregable podría ser "Implementar un sistema de notificaciones personalizadas" o "Crear un programa de fidelización").</li>
+                    </ol>
+                    <p class="mt-2 text-sm">El resultado es un mapa visual que conecta los entregables directamente con los objetivos de negocio a través de los actores y los impactos deseados. Ayuda a priorizar y a evitar construir cosas que no contribuyen al objetivo principal.</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4 text-cyan-600">Triángulo de Hierro y Planificación Ágil</h3>
+                    <p class="mb-2">El <strong class="text-teal-600">Triángulo de Hierro</strong> tradicional en gestión de proyectos tiene tres restricciones: <strong class="text-indigo-600">Alcance, Tiempo y Costo</strong>, con la Calidad en el centro. Si uno cambia, al menos otro debe ajustarse para mantener la calidad.</p>
+                    <ul class="list-disc list-inside ml-4 space-y-1 text-sm mb-2">
+                        <li>En <strong class="text-blue-600">Waterfall (Tradicional)</strong>: Generalmente se fija el Alcance al inicio. Si surgen problemas, se suele sacrificar Tiempo (retrasos) o Costo (más recursos) para cumplir con el alcance, o la Calidad se ve afectada.</li>
+                        <li>En <strong class="text-blue-600">Agile</strong>: Se invierte el triángulo. Generalmente se fijan el Tiempo (duración del Sprint/release) y el Costo (tamaño del equipo). El <strong class="text-red-600">Alcance es la variable flexible</strong>. El equipo se compromete a entregar el máximo valor posible dentro del tiempo y costo fijos, priorizando las características más importantes. La Calidad no es negociable y se mantiene alta a través de la Definición de "Terminado".</li>
+                    </ul>
+                    <p class="text-sm">Aunque en Agile el alcance es variable, los equipos se comprometen a iteraciones de trabajo fijas (Sprints) o límites WIP (Kanban). Para planificación a largo plazo o MVPs, a veces se puede fijar un alcance mínimo, ajustando tiempo/recursos si es necesario, pero una vez lanzado el MVP, se vuelve a un alcance variable.</p>
+                </div>
+                 <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4 text-cyan-600">Incepción / Sprint 0</h3>
+                    <p class="mb-2">Aunque el término "Sprint 0" no está definido formalmente en la Guía Scrum (que promueve empezar con un Sprint funcional desde el inicio), muchas organizaciones lo usan para un período de preparación antes del primer Sprint de desarrollo.</p>
+                    <p class="mb-2">Actividades comunes en una Incepción o Sprint 0:</p>
+                    <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
+                        <li>Configurar entornos de desarrollo, pruebas, integración continua.</li>
+                        <li>Definir una arquitectura inicial de alto nivel.</li>
+                        <li>Crear una visión compartida del producto (ej. Elevator Pitch, Impact Mapping).</li>
+                        <li>Desarrollar un Product Backlog inicial (ej. mediante User Story Mapping).</li>
+                        <li>Refinar algunas historias de usuario para el primer Sprint.</li>
+                        <li>Establecer la Definición de "Terminado" (DoD) inicial.</li>
+                        <li>Alinear al equipo y a los stakeholders.</li>
+                    </ul>
+                    <p class="mt-2 text-sm">El objetivo es estar listos para comenzar el primer Sprint de desarrollo con una base sólida y un backlog preparado.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4 text-cyan-600">Release Plan y Velocidad</h3>
+                     <p class="mb-2"><strong class="text-teal-600">Velocidad:</strong> Es una medida de la cantidad de trabajo (generalmente en puntos de historia) que un Equipo de Desarrollo puede completar y "terminar" (según la DoD) en un Sprint. Se calcula promediando los puntos completados en Sprints anteriores (usualmente los últimos 3-5 Sprints). Las historias no terminadas no suman a la velocidad.</p>
+                     <p class="mb-2"><strong class="text-teal-600">Release Plan:</strong> Se define en función de las prioridades del Product Owner, la duración de los Sprints y la velocidad del equipo. Ayuda a proyectar cuántos Sprints podrían ser necesarios para entregar un conjunto de funcionalidades (un release).</p>
+                     <div class="example-box text-xs">
+                        <strong>Ejemplo de Cálculo de Velocidad y Proyección de Release:</strong>
+                        <ul>
+                            <li>Sprint 1: Equipo completó 25 puntos.</li>
+                            <li>Sprint 2: Equipo completó 30 puntos.</li>
+                            <li>Sprint 3: Equipo completó 20 puntos.</li>
+                        </ul>
+                        <p>Velocidad promedio = (25 + 30 + 20) / 3 = 75 / 3 = 25 puntos por Sprint.</p>
+                        <p>Si el Product Owner quiere un release con funcionalidades que suman 150 puntos, se podría proyectar: 150 puntos / 25 puntos/Sprint = 6 Sprints.</p>
+                        <p><strong>Importante:</strong> La velocidad es un dato histórico para planificación, no un objetivo a batir. Varía y se usa para proyecciones, no para medir el rendimiento individual o comparar equipos.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-2xl font-semibold mb-4 text-cyan-600">Burn Down Chart</h3>
+                    <p class="mb-2">Es una gráfica visual que muestra la cantidad de trabajo restante en un Sprint (Sprint Burndown Chart) o en un Release (Release Burndown Chart) a lo largo del tiempo. Ayuda a ver el progreso y a detectar si el equipo va por buen camino para cumplir el objetivo.</p>
+                    <ul class="list-disc list-inside ml-4 space-y-1 text-sm">
+                        <li>El eje vertical representa el trabajo restante (ej. en puntos de historia o tareas).</li>
+                        <li>El eje horizontal representa el tiempo (días del Sprint o número de Sprints).</li>
+                        <li>Una línea ideal muestra una quema constante de trabajo. La línea real muestra el progreso real.</li>
+                    </ul>
+                    <p class="mt-2 text-sm"><strong>Ventajas:</strong> Cohesión del equipo, representación visual del avance, simplicidad. Un "burndown perfecto" (línea recta descendente) puede ser sospechoso, ya que el trabajo raramente avanza de forma tan lineal.</p>
+                    <p class="text-xs text-gray-500 mt-1">Se pueden observar patrones: si la línea real está muy por encima de la ideal, el equipo podría estar retrasado. Si baja muy rápido, quizás se subestimó el trabajo o se añadió alcance.</p>
                 </div>
             </div>
 
@@ -1131,6 +1324,7 @@
                                     <li><strong>Aceptar:</strong> Reconocer la existencia del riesgo y no tomar ninguna acción a menos que el riesgo ocurra. Se usa para riesgos de baja prioridad o cuando el costo de la respuesta es mayor que el impacto. Puede ser activa (desarrollar un plan de contingencia) o pasiva (sin plan).</li>
                                 </ul>
                             <p class="text-sm text-gray-600 ml-8">También se pueden definir <strong class="text-blue-600">planes de contingencia</strong> (qué hacer si el riesgo se materializa).</p>
+                            <p class="text-sm text-gray-600 ml-8 mt-1">Para <strong class="text-green-600">oportunidades</strong> (riesgos positivos), las estrategias pueden ser: <strong>Explorar</strong> (asegurar que ocurra), <strong>Mejorar</strong> (aumentar probabilidad/impacto), <strong>Compartir</strong> (con un tercero que pueda capturarla mejor), o <strong>Aceptar</strong>.</p>
                         </li>
                         <li>
                             <div class="flex items-center text-red-700 mb-1">
